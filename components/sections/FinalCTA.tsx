@@ -25,13 +25,14 @@ export default function FinalCTA() {
         <ScrollReveal>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Ready To Transform Your
+              Ready To Transform Your 
+              Digital Presence?
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600 mt-2">
-                Digital Presence?
+                
               </span>
             </h2>
             <p className="text-lg md:text-xl text-primary-200 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Join hundreds of successful businesses that have unlocked exponential 
+              Join successful businesses that have unlocked exponential 
               growth with our proven marketing strategies.
             </p>
 
@@ -60,10 +61,10 @@ export default function FinalCTA() {
               </div>
               <div>
                 <div className="text-accent-500 font-bold text-2xl mb-1">
-                  30-Day
+                 
                 </div>
                 <div className="text-primary-400 text-sm">
-                  Money Back
+                  
                 </div>
               </div>
               <div>

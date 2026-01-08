@@ -27,9 +27,9 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto text-center">
           {/* Animated headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
-            Personalized outbound that brings in 
+            Personalized outbound that brings in high-paying clients.
             <span className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
-              high-paying clients.
+              
             </span>
           </h1>
 
