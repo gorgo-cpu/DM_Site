@@ -36,7 +36,7 @@ const pricingTiers = [
     highlighted: true,
   },
   {
-    name: 'Premium Outbound',
+    name: 'Done-For-You Outbound',
     price: '',
     period: '',
     description: 'Perfect for those who want maximum outreach and guaranteed results',
