@@ -73,18 +73,18 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-primary-400">
               <li>
                 <a
-                  href="mailto:hello@example.com"
+                  href="david@dm-growth.com"
                   className="hover:text-accent-500 transition-colors"
                 >
-                  hello@example.com
+                  david@dm-growth.com
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+40 728 822 123"
                   className="hover:text-accent-500 transition-colors"
                 >
-                  +1 (234) 567-890
+                  +40 728 822 123
                 </a>
               </li>
             </ul>
