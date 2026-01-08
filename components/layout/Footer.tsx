@@ -95,7 +95,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-primary-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-primary-500 text-sm">
-              © {currentYear} DM Site. All rights reserved.
+              © {currentYear} DM Growth. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               {/* Social links placeholder */}
@@ -109,7 +109,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/dm-growth/"
                 className="text-primary-500 hover:text-accent-500 transition-colors"
                 aria-label="LinkedIn"
               >
