@@ -6,27 +6,27 @@ import Card from '@/components/ui/Card'
 import ScrollReveal from '@/components/layout/ScrollReveal'
 
 const stats = [
-  { value: 500, suffix: '+', label: 'Successful Projects' },
-  { value: 98, suffix: '%', label: 'Client Retention' },
-  { value: 250, suffix: '%', label: 'Average Revenue Growth' },
-  { value: 50, suffix: 'M+', label: 'Ad Spend Managed' },
+  { value: 13, suffix: '+', label: 'Companies Served' },
+  { value: 95, suffix: '%', label: 'Client Satisfaction' },
+  { value: 2, suffix: 'x', label: 'Average Revenue Growth' },
+  { value: 15000, suffix: '+', label: 'Leads Contacted' },
 ]
 
 const testimonials = [
   {
-    quote: 'Working with this team transformed our entire digital strategy. We saw a 300% increase in qualified leads within the first quarter.',
-    author: 'Sarah Mitchell',
-    role: 'CEO, TechVentures',
+    quote: 'We went from 0 to 6 qualified meetings in our first month. The personalized outreach actually gets responses, and the team handles everything so we can focus on closing.',
+    author: 'Michael R.',
+    role: 'Founder, B2B SaaS Company',
   },
   {
-    quote: 'The ROI speaks for itself. Their data-driven approach and constant optimization delivered results beyond our expectations.',
-    author: 'James Park',
-    role: 'Marketing Director, GrowthCo',
+    quote: "The lead quality is what impressed me most. Instead of chasing cold leads, we're now talking to people who actually need our service. Worth every penny.",
+    author: 'Jennifer K.',
+    role: 'Head of Sales, Tech Consulting',
   },
   {
-    quote: 'Finally, a marketing partner that truly understands our business. Their strategic insight and execution are unmatched.',
-    author: 'Emily Chen',
-    role: 'Founder, InnovateLabs',
+    quote: 'Finally found a solution that scales without hiring more SDRs. The meeting booking service alone saves us 10+ hours per week.',
+    author: 'David M.',
+    role: 'CEO, Marketing Agency',
   },
 ]
 
@@ -88,7 +88,7 @@ export default function Results() {
               Here's what companies like you have achieved
             </h2>
             <p className="text-lg text-primary-300 max-w-2xl mx-auto">
-              Over 13+ companies have joined GenFlows Agency in 2024 and we've already transformed their outbound with our proven strategies. Ready to join them and create a system that works for you?
+              Over 13+ companies have joined DM Growth in 2024 and we've already transformed their outbound with our proven strategies. Ready to join them and create a system that works for you?
             </p>
           </div>
         </ScrollReveal>
