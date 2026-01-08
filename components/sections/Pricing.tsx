@@ -15,8 +15,7 @@ const pricingTiers = [
     features: [
       'Complete infrastructure build',
       '1 Free outbound campaign',
-      'GenFlows SOPs',
-      'Operational expenses',
+      'DM Growth SOPs',
     ],
     highlighted: false,
   },
@@ -26,14 +25,11 @@ const pricingTiers = [
     period: '',
     description: 'Perfect for those who want personalized coaching',
     features: [
-      '4x Weekly Consultancy Call',
+      'Weekly Consultancy Call',
       'Course Modules',
-      'Slack Access',
-      'Access to GFA team',
-      'Clay & Smartlead Expert',
-      '1:1 Calls with Wouter',
-      '24/7 Support from Wouter',
-      'Rolling 1-month engagement',
+      'Access to the DM Growth team',
+      '1:1 Calls with our team',
+      '24/7 Support on Whatsapp',
     ],
     highlighted: true,
   },
@@ -43,14 +39,12 @@ const pricingTiers = [
     period: '',
     description: "Perfect for those who don't want to do anything",
     features: [
-      'Done-For-You Outbound',
       'Infrastructure build',
-      'Fractional Head of Sales',
+      'Outbound Campaigns',
       'Bi-weekly calls',
-      'Covered all expenses',
-      '1:1 Calls with Wouter & team',
-      '24/7 Support on Slack',
-      '3-month engagement',
+      '1:1 Calls with our team',
+      '24/7 Support on Whatsapp',
+      'Engagement of your choice',
     ],
     highlighted: false,
   },
@@ -149,8 +143,8 @@ export default function Pricing() {
         <ScrollReveal delay={300}>
           <div className="mt-12 text-center">
             <p className="text-primary-400">
-              All plans include a 30-day money-back guarantee. 
-              <span className="text-accent-500 ml-1">No questions asked.</span>
+              
+              <span className="text-accent-500 ml-1"></span>
             </p>
           </div>
         </ScrollReveal>
