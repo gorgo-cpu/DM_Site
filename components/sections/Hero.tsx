@@ -27,15 +27,14 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto text-center">
           {/* Animated headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
-            Transform Your Digital
+            Personalized outbound that brings in
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">
-              Presence Today
+              high-paying clients.
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-primary-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Elevate your brand with data-driven marketing strategies and cutting-edge 
-            digital solutions. We deliver measurable results that drive exponential growth.
+            With my proven system, we'll use our outbound systems to position your company as the go-to expert in your niche. We'll grow your company together and generate predictable income - all in 90 days.
           </p>
 
           {/* CTAs */}
@@ -104,4 +103,5 @@ export default function Hero() {
     </section>
   )
 }
+
 

@@ -181,3 +181,4 @@ This document outlines the generalized information architecture and interaction 
 
 *This specification is a generalized framework derived from analyzing modern marketing sites. All content, branding, and specific implementation details will be original.*
 
+

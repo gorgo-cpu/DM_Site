@@ -5,33 +5,33 @@ import ScrollReveal from '@/components/layout/ScrollReveal'
 const steps = [
   {
     number: '01',
-    title: 'Discovery & Analysis',
-    description: 'We dive deep into your business, market, and competitors to identify unique opportunities and challenges.',
+    title: 'Competitor & ICP Analysis',
+    description: "We'll dive deep into your competitors' strategies - what works for them, what you can do better - and thoroughly analyze your target audience's pain points, values, and desires.",
   },
   {
     number: '02',
-    title: 'Strategic Blueprint',
-    description: 'Custom roadmap creation with clear milestones, KPIs, and actionable tactics tailored to your goals.',
+    title: 'Building your infrastructure',
+    description: "We'll create your scalable infrastructure on 1, 2 or 5 domains. Built on a Private Server that only you will use.",
   },
   {
     number: '03',
-    title: 'Campaign Development',
-    description: 'Design and build high-converting campaigns across channels with compelling creative and messaging.',
+    title: 'ICP Finding & Scraping',
+    description: "We'll find your Ideal Customer Profile and scrape them for use in our outbound strategy. The leads will be verified and safe to send.",
   },
   {
     number: '04',
-    title: 'Launch & Activation',
-    description: 'Execute campaigns with precision timing and coordinated deployment across all platforms.',
+    title: 'Copywriting & Personalization',
+    description: "Based on your onboarding form we'll start writing the copy and personalizing the outbound strategy to cater to your needs.",
   },
   {
     number: '05',
-    title: 'Monitor & Optimize',
-    description: 'Real-time performance tracking with continuous A/B testing and data-driven refinements.',
+    title: 'Campaign Creation & Launching',
+    description: "We'll prepare the campaigns in Smartlead.ai for you to check and make sure it all fits the way you'd speak to your customer. We'll launch after approval.",
   },
   {
     number: '06',
-    title: 'Scale & Expand',
-    description: 'Amplify what works and explore new channels as we systematically grow your market presence.',
+    title: 'Inbox Management & Booked Meetings',
+    description: "We'll manage the inbound replies and do pipeline management to secure everyone that is interested will show up to a meeting with you. Our work is only done when you had a meeting with your ICP.",
   },
 ]
 
@@ -45,10 +45,10 @@ export default function Process() {
               HOW WE WORK
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Proven Process
+              Here's our step-by-step plan
             </h2>
             <p className="text-lg text-primary-300 max-w-2xl mx-auto">
-              A systematic approach that delivers consistent results and eliminates guesswork.
+              We didn't have to reinvent the wheel - we just have to make the wheel rounder. We've perfected our strategy to use highly personalized outbound that converts into $$$.
             </p>
           </div>
         </ScrollReveal>
@@ -88,4 +88,5 @@ export default function Process() {
     </section>
   )
 }
+
 

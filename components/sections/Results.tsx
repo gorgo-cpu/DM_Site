@@ -85,11 +85,10 @@ export default function Results() {
               PROVEN RESULTS
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              The Numbers Speak For Themselves
+              Here's what companies like you have achieved
             </h2>
             <p className="text-lg text-primary-300 max-w-2xl mx-auto">
-              Real results from real businesses. See what's possible when strategy 
-              meets execution.
+              Over 13+ companies have joined GenFlows Agency in 2024 and we've already transformed their outbound with our proven strategies. Ready to join them and create a system that works for you?
             </p>
           </div>
         </ScrollReveal>
@@ -135,4 +134,5 @@ export default function Results() {
     </section>
   )
 }
+
 

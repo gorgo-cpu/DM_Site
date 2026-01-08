@@ -8,51 +8,49 @@ import ScrollReveal from '@/components/layout/ScrollReveal'
 
 const pricingTiers = [
   {
-    name: 'Starter',
-    price: '$2,499',
-    period: '/month',
-    description: 'Perfect for small businesses ready to scale',
+    name: 'Infrastructure Build',
+    price: 'Custom',
+    period: '',
+    description: 'Perfect for people that want to use a proven system',
     features: [
-      'Strategic marketing plan',
-      '2 active campaigns',
-      'Monthly performance reports',
-      'Email & chat support',
-      'Basic analytics dashboard',
-      'Quarterly strategy reviews',
+      'Complete infrastructure build',
+      '1 Free outbound campaign',
+      'GenFlows SOPs',
+      'Operational expenses',
     ],
     highlighted: false,
   },
   {
-    name: 'Professional',
-    price: '$4,999',
-    period: '/month',
-    description: 'For growing businesses seeking dominance',
+    name: '1:1 Consulting',
+    price: 'Custom',
+    period: '',
+    description: 'Perfect for those who want personalized coaching',
     features: [
-      'Comprehensive marketing strategy',
-      '5 active campaigns',
-      'Bi-weekly optimization calls',
-      'Priority support',
-      'Advanced analytics & insights',
-      'Monthly strategy reviews',
-      'A/B testing & experimentation',
-      'Conversion rate optimization',
+      '4x Weekly Consultancy Call',
+      'Course Modules',
+      'Slack Access',
+      'Access to GFA team',
+      'Clay & Smartlead Expert',
+      '1:1 Calls with Wouter',
+      '24/7 Support from Wouter',
+      'Rolling 1-month engagement',
     ],
     highlighted: true,
   },
   {
-    name: 'Enterprise',
+    name: 'GenFlows Outbound',
     price: 'Custom',
     period: '',
-    description: 'Tailored solutions for market leaders',
+    description: "Perfect for those who don't want to do anything",
     features: [
-      'Full-service marketing suite',
-      'Unlimited campaigns',
-      'Dedicated account team',
-      '24/7 priority support',
-      'Custom analytics & reporting',
-      'Weekly strategy sessions',
-      'Advanced automation',
-      'Multi-brand management',
+      'Done-For-You Outbound',
+      'Infrastructure build',
+      'Fractional Head of Sales',
+      'Bi-weekly calls',
+      'Covered all expenses',
+      '1:1 Calls with Wouter & team',
+      '24/7 Support on Slack',
+      '3-month engagement',
     ],
     highlighted: false,
   },
@@ -75,11 +73,10 @@ export default function Pricing() {
               PRICING
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Invest In Your Growth
+              Choose what works best for you
             </h2>
             <p className="text-lg text-primary-300 max-w-2xl mx-auto">
-              Transparent pricing with no hidden fees. Choose the plan that fits your 
-              business goals.
+              Flexible options to match your business needs and growth stage.
             </p>
           </div>
         </ScrollReveal>
@@ -161,4 +158,5 @@ export default function Pricing() {
     </section>
   )
 }
+
 
