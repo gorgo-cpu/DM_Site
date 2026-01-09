@@ -11,7 +11,7 @@ const challenges = [
       </svg>
     ),
     title: 'Do it yourself',
-    description: 'Burn months on trial & error. Expensive tools. No guaranteed results. <br /> High Effort, Low ROI.<br />',
+    description: 'Burn months on trial & error. Expensive tools. No guaranteed results. \n\nHigh Effort, Low ROI.',
   },
   {
     icon: (
@@ -20,7 +20,7 @@ const challenges = [
       </svg>
     ),
     title: 'Hire In-House',
-    description: "Salaries, taxes, and training costs. 3+ months ramp-up time. Management headaches. <br /> Slow & Expensive.<br />",
+    description: "Salaries, taxes, and training costs. 3+ months ramp-up time. Management headaches. \n\nSlow & Expensive.",
   },
   {
     icon: (
@@ -29,7 +29,7 @@ const challenges = [
       </svg>
     ),
     title: 'The Partner Way (DM Growth)',
-    description: "Proven strategy. Execution from Day 1. Qualified meetings delivered to your calendar. <br /> Plug & Play Growth.<br />",
+    description: "Proven strategy. Execution from Day 1. Qualified meetings delivered to your calendar. \n\nPlug & Play Growth.",
   },
 ]
 
