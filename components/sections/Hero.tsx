@@ -84,7 +84,7 @@ export default function Hero() {
         </div>
       </Container>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="animate-bounce">
           <svg
@@ -99,7 +99,7 @@ export default function Hero() {
             <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </div>
-      </div>
+      </div>*/}
     </section>
   )
 }

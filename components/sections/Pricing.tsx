@@ -90,7 +90,7 @@ export default function Pricing() {
                 hover={!tier.highlighted}
               >
                 {tier.highlighted && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-accent-500 text-white text-sm font-semibold rounded-full">
+                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-accent-500 text-white text-sm font-semibold rounded-full">
                     Most Popular
                   </div>
                 )}
