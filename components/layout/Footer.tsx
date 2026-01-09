@@ -86,6 +86,12 @@ export default function Footer() {
                 >
                   +40 728 822 123
                 </a>
+                <a
+                  href="tel:+40 773 388 205"
+                  className="hover:text-accent-500 transition-colors"
+                >
+                  +40 773 388 205 (DACH Region)
+                </a>
               </li>
             </ul>
           </div>

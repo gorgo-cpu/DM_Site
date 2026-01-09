@@ -58,26 +58,26 @@ export default function Hero() {
           <div className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-primary-800">
             <div>
               <div className="text-3xl md:text-4xl font-bold text-accent-500 mb-2">
-                13+
+                250+
               </div>
               <div className="text-sm md:text-base text-primary-400">
-                Projects Delivered
+                Qualified Meetings
               </div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-accent-500 mb-2">
-                95%
+                22%
               </div>
               <div className="text-sm md:text-base text-primary-400">
-                Client Satisfaction
+                Average Reply Rate
               </div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-accent-500 mb-2">
-                15K+
+                10K+
               </div>
               <div className="text-sm md:text-base text-primary-400">
-                Leads Contacted
+                Decision Makers Engaged
               </div>
             </div>
           </div>

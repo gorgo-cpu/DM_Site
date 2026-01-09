@@ -11,7 +11,7 @@ const challenges = [
       </svg>
     ),
     title: 'Do it yourself',
-    description: 'Spend months figuring out how to create an outbound system that stands out, only to find yourself blending in with every other competitor, missing out on premium clients.',
+    description: 'Burn months on trial & error. Expensive tools. No guaranteed results.High Effort, Low ROI.',
   },
   {
     icon: (
@@ -19,8 +19,8 @@ const challenges = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
       </svg>
     ),
-    title: 'Hire more SDRs/BDRs',
-    description: "They'll try it, but at what cost? Expect long timelines, complicated processes, managing people, and huge overhead expenses.",
+    title: 'Hire In-House',
+    description: "Salaries, taxes, and training costs. 3+ months ramp-up time. Management headaches.Slow & Expensive.",
   },
   {
     icon: (
@@ -28,8 +28,8 @@ const challenges = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    title: 'But what if there was a better way?',
-    description: "A solution that does all of this for you? What if you only have to create a strategy once and the rest will get done for you? No headaches following up and seeing that your employees are too busy walking back and forth to the coffee machine. It's designed for long-term success, without draining your time or wallet.",
+    title: 'The Partner Way (DM Growth)',
+    description: "Proven strategy. Execution from Day 1. Qualified meetings delivered to your calendar.Plug & Play Growth.",
   },
 ]
 

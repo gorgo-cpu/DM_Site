@@ -6,10 +6,10 @@ import Card from '@/components/ui/Card'
 import ScrollReveal from '@/components/layout/ScrollReveal'
 
 const stats = [
-  { value: 13, suffix: '+', label: 'Companies Served' },
-  { value: 95, suffix: '%', label: 'Client Satisfaction' },
-  { value: 2, suffix: 'x', label: 'Average Revenue Growth' },
-  { value: 15000, suffix: '+', label: 'Leads Contacted' },
+  { value: 250, suffix: '+', label: 'Qualified Meetings' },
+  { value: 1.5, prefix: '€', suffix: 'M+', label: 'Pipeline Opportunities' },
+  { value: 22, suffix: '%', label: 'Average Reply Rate' },
+  { value: 10, suffix: 'K+', label: 'Decision Makers Engaged' },
 ]
 
 const testimonials = [
