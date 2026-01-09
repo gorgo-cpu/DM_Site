@@ -25,12 +25,11 @@ export default function Footer() {
             <p className="text-primary-400 text-sm">
               We build automated sales engines that fill your calendar with qualified B2B meetings. No fluff, just revenue.
             </p>
-          </div>
-          <div>
-          <p className="text-primary-400 text-sm">  
+            <p className="text-primary-400 text-sm mt-4">  
               Situated in Bucharest, Romania.
             </p>
           </div>
+         
 
           {/* Navigation */}
           <div>
