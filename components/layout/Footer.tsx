@@ -23,7 +23,10 @@ export default function Footer() {
               DM<span className="text-accent-500">.</span>
             </h3>
             <p className="text-primary-400 text-sm">
-              Transform your digital presence with premium marketing solutions.
+              We build automated sales engines that fill your calendar with qualified B2B meetings. No fluff, just revenue.
+            </p>
+            <p className="text-primary-400 text-sm">  
+              Situated in Bucharest, Romania.
             </p>
           </div>
 
@@ -86,6 +89,8 @@ export default function Footer() {
                 >
                   +40 728 822 123
                 </a>
+              </li>
+              <li>
                 <a
                   href="tel:+40 773 388 205"
                   className="hover:text-accent-500 transition-colors"

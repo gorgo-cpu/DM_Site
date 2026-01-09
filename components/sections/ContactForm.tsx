@@ -127,14 +127,13 @@ export default function ContactForm() {
         <ScrollReveal>
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-accent-500/10 border border-accent-500/30 rounded-full text-accent-500 text-sm font-semibold mb-4">
-              GET IN TOUCH
+              READY TO SCALE?
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Let's Start Your Success Story
+              Stop chasing leads. <br /> Start closing deals.
             </h2>
             <p className="text-lg text-primary-300 max-w-2xl mx-auto">
-              Tell us about your business goals, and we'll show you how we can help 
-              you achieve them.
+              Fill out the form below to book a 15-minute discovery call. We'll analyze your current outreach and show you exactly how to add €50k+ to your pipeline.
             </p>
           </div>
         </ScrollReveal>
@@ -176,13 +175,13 @@ export default function ContactForm() {
                 </div>
 
                 <Input
-                  label="Email Address *"
+                  label="Work Email *"
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   error={errors.email}
-                  placeholder="john@example.com"
+                  placeholder="john@company.com"
                   required
                 />
 
@@ -194,6 +193,15 @@ export default function ContactForm() {
                   onChange={handleChange}
                   placeholder="+1 (234) 567-8900"
                 />
+
+                {/*<Input
+                  label="Company Name *"
+                  type="tel"
+                  name="companyName"
+                  value={formData.companyName}
+                  onChange={handleChange}
+                  placeholder="Company Website + Niche"
+                />*/}
 
                 <Textarea
                   label="Message *"
@@ -227,7 +235,7 @@ export default function ContactForm() {
                     disabled={isSubmitting}
                     className="w-full sm:w-auto"
                   >
-                    Send Message
+                    Book My Discovery Call
                   </Button>
                   <p className="text-sm text-primary-400">
                     We respect your privacy. Your information is secure.

@@ -25,15 +25,14 @@ export default function FinalCTA() {
         <ScrollReveal>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Ready To Transform Your 
-              Digital Presence?
+            Stop waiting for referrals. 
+            Start closing deals.
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600 mt-2">
                 
               </span>
             </h2>
             <p className="text-lg md:text-xl text-primary-200 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Join successful businesses that have unlocked exponential 
-              growth with our proven marketing strategies.
+              We build the engine that books qualified meetings directly into your calendar. <br /> Predictable, scalable, and automated.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -42,10 +41,10 @@ export default function FinalCTA() {
                 onClick={() => scrollToSection('contact')}
                 className="text-lg px-10"
               >
-                Start Your Journey
+                Book Your Strategy Call
               </Button>
               <p className="text-primary-400 text-sm">
-                Free strategy call • No commitment required
+                Free 15-min audit • No sales pressure
               </p>
             </div>
 
@@ -53,10 +52,10 @@ export default function FinalCTA() {
             <div className="grid grid-cols-3 gap-8 pt-12 border-t border-primary-700/50">
               <div>
                 <div className="text-accent-500 font-bold text-2xl mb-1">
-                  24/7
+                 Launch  
                 </div>
                 <div className="text-primary-400 text-sm">
-                  Priority Support
+                  in 7 Days
                 </div>
               </div>
               <div>
@@ -69,10 +68,10 @@ export default function FinalCTA() {
               </div>
               <div>
                 <div className="text-accent-500 font-bold text-2xl mb-1">
-                  100%
+                  Verified
                 </div>
                 <div className="text-primary-400 text-sm">
-                  Transparent
+                  Decision Makers
                 </div>
               </div>
             </div>

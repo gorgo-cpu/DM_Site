@@ -14,19 +14,19 @@ const stats = [
 
 const testimonials = [
   {
-    quote: 'We went from 0 to 6 qualified meetings in our first month. The personalized outreach actually gets responses, and the team handles everything so we can focus on closing.',
-    author: 'Michael R.',
-    role: 'Founder, B2B SaaS Company',
+    quote: 'You need product demos, not website clicks. We fill your SDRs calendars with qualified tech buyers ready to see your solution.',
+    author: '',
+    role: 'B2B SaaS Companies',
   },
   {
-    quote: "The lead quality is what impressed me most. Instead of chasing cold leads, we're now talking to people who actually need our service. Worth every penny.",
-    author: 'Jennifer K.',
-    role: 'Head of Sales, Tech Consulting',
+    quote: "Stop relying on referrals. We build a predictable engine that brings you clients looking for retainers of €2k-€10k/month.",
+    author: '',
+    role: 'Marketing & Dev Agencies',
   },
   {
-    quote: 'Finally found a solution that scales without hiring more SDRs. The meeting booking service alone saves us 10+ hours per week.',
-    author: 'David M.',
-    role: 'CEO, Marketing Agency',
+    quote: 'Your buyers are not on Facebook. We reach Factory Directors and Engineers directly via cold email to secure large contracts.',
+    author: '',
+    role: 'Industrial & Manufacturing',
   },
 ]
 
@@ -85,10 +85,10 @@ export default function Results() {
               PROVEN RESULTS
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Here's what companies like you have achieved
+             Built for high-ticket B2B players.
             </h2>
             <p className="text-lg text-primary-300 max-w-2xl mx-auto">
-              Over 13+ companies have joined DM Growth in 2024 and we've already transformed their outbound with our proven strategies. Ready to join them and create a system that works for you?
+              
             </p>
           </div>
         </ScrollReveal>
@@ -111,12 +111,12 @@ export default function Results() {
             <ScrollReveal key={index} delay={index * 100}>
               <Card hover={false} className="h-full flex flex-col">
                 <div className="text-accent-500 mb-4">
-                  <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                  {/*<svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
+                  </svg>*/}
                 </div>
                 <p className="text-primary-200 mb-6 flex-grow italic leading-relaxed">
-                  "{testimonial.quote}"
+                  {testimonial.quote}
                 </p>
                 <div>
                   <div className="font-semibold text-white">

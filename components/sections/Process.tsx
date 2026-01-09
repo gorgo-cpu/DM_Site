@@ -5,33 +5,33 @@ import ScrollReveal from '@/components/layout/ScrollReveal'
 const steps = [
   {
     number: '01',
-    title: 'Competitor & ICP Analysis',
-    description: "We'll dive deep into your competitors' strategies - what works for them, what you can do better - and thoroughly analyze your target audience's pain points, values, and desires.",
+    title: 'Strategy & Market Fit',
+    description: "Before writing a single word, we dissect your market. We identify the exact job titles and industries that have the highest intent to buy your product right now.",
   },
   {
     number: '02',
-    title: 'Building your infrastructure',
-    description: "We'll create your scalable infrastructure on 1, 2 or 5 domains. Built on a Private Server that only you will use.",
+    title: 'Technical Setup & Deliverability',
+    description: "We build a bulletproof sending infrastructure (dedicated domains & warmed-up inboxes) to ensure your emails land in the Primary Inbox, not Spam.",
   },
   {
     number: '03',
-    title: 'ICP Finding & Scraping',
-    description: "We'll find your Ideal Customer Profile and scrape them for use in our outbound strategy. The leads will be verified and safe to send.",
+    title: 'Verified List Building',
+    description: "We hand-pick thousands of verified decision-makers. No outdated databases. Every email is validated live to protect your domain reputation.",
   },
   {
     number: '04',
-    title: 'Copywriting & Personalization',
-    description: "Based on your onboarding form we'll start writing the copy and personalizing the outbound strategy to cater to your needs.",
+    title: 'High-Converting Copy',
+    description: "We craft personalized email sequences using psychological triggers that cut through the noise. We don't just pitch; we start conversations.",
   },
   {
     number: '05',
-    title: 'Campaign Creation & Launching',
-    description: "We'll prepare the campaigns in Smartlead.ai for you to check and make sure it all fits the way you'd speak to your customer. We'll launch after approval.",
+    title: 'Launch & Optimization',
+    description: "We launch the campaigns and A/B test everything—subject lines, offers, and call-to-actions—doubling down on what generates meetings.",
   },
   {
     number: '06',
-    title: 'Inbox Management & Booked Meetings',
-    description: "We'll manage the inbound replies and do pipeline management to secure everyone that is interested will show up to a meeting with you. Our work is only done when you had a meeting with your ICP.",
+    title: 'Appointment Setting',
+    description: "We handle the replies, overcome objections, and book qualified meetings directly into your calendar. You just focus on closing the deal.",
   },
 ]
 
