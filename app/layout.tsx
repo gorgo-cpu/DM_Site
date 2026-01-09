@@ -12,6 +12,11 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: 'DM Growth | Personalized Outbound',
   description: 'We deliver qualified B2B meetings through personalized outbound campaigns',
+  icons: {
+      icon: '/favicon.ico',
+      shortcut: '/favicon.ico',
+      apple: '/apple-touch-icon.png',
+  },
   keywords: ['digital marketing', 'brand strategy', 'marketing solutions', 'growth marketing','B2B lead generation', 'outbound sales', 'qualified meetings', 'sales appointments', 'B2B sales',],
   authors: [{ name: 'DM Site' }],
   openGraph: {
