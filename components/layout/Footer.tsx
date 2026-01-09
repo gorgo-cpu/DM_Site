@@ -23,7 +23,7 @@ export default function Footer() {
               DM<span className="text-accent-500">.</span>
             </h3>
             <p className="text-primary-400 text-sm">
-              We build automated sales engines that fill your calendar with qualified B2B meetings. No fluff, just revenue.
+              We build automated sales engines that fill your calendar with qualified B2B meetings.
             </p>
             <p className="text-primary-400 text-sm mt-4">  
               Situated in Bucharest, Romania.

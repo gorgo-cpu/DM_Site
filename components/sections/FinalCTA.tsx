@@ -44,7 +44,7 @@ export default function FinalCTA() {
                 Book Your Strategy Call
               </Button>
               <p className="text-primary-400 text-sm">
-                Free 15-min audit • No sales pressure
+                Free 15-min audit 
               </p>
             </div>
 
