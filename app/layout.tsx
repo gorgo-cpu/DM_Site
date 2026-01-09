@@ -10,12 +10,12 @@ const plusJakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Transform Your Digital Presence | Premium Marketing Solutions',
-  description: 'Elevate your brand with data-driven marketing strategies and cutting-edge digital solutions. We deliver measurable results that drive growth.',
-  keywords: ['digital marketing', 'brand strategy', 'marketing solutions', 'growth marketing'],
+  title: 'DM Growth | Personalized Outbound',
+  description: 'We deliver qualified B2B meetings through personalized outbound campaigns',
+  keywords: ['digital marketing', 'brand strategy', 'marketing solutions', 'growth marketing','B2B lead generation', 'outbound sales', 'qualified meetings', 'sales appointments', 'B2B sales',],
   authors: [{ name: 'DM Site' }],
   openGraph: {
-    title: 'Transform Your Digital Presence | Premium Marketing Solutions',
+    title: 'DM Growth | Personalized Outbound',
     description: 'Elevate your brand with data-driven marketing strategies and cutting-edge digital solutions.',
     type: 'website',
     locale: 'en_US',
