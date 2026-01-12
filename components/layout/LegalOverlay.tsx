@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
@@ -47,7 +47,15 @@ export default function LegalOverlay({ openSection, onClose }: LegalOverlayProps
   }, [isOpen, onClose])
 
   const scrollToSection = useCallback((id: string) => {
+    const container = scrollContainerRef.current
     const el = document.getElementById(id)
+
+    if (container && el) {
+      const top = Math.max(el.offsetTop - 150, 0) // land higher so the subtitle stays in view
+      container.scrollTo({ top, behavior: 'smooth' })
+      return
+    }
+
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
@@ -99,7 +107,7 @@ export default function LegalOverlay({ openSection, onClose }: LegalOverlayProps
 
   return createPortal(
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center px-4 py-10 sm:px-6 lg:px-8 transition-opacity duration-300 ${
+      className={`fixed inset-0 z-[9999] flex items-start sm:items-center justify-center px-4 py-6 sm:px-6 sm:py-10 lg:px-8 transition-opacity duration-300 ${
         isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       }`}
       role="dialog"
@@ -112,42 +120,39 @@ export default function LegalOverlay({ openSection, onClose }: LegalOverlayProps
       />
 
       <div
-        className={`relative z-10 w-full max-w-5xl max-h-[85vh] overflow-hidden rounded-3xl bg-white text-slate-900 shadow-2xl transition-all duration-300 ${
+        className={`relative z-10 w-full max-w-6xl max-h-[90vh] overflow-hidden rounded-3xl bg-slate-900/90  text-white shadow-2xl backdrop-blur-2xl transition-all duration-300 ${
           isOpen ? 'translate-y-0 scale-100 opacity-100' : 'translate-y-6 scale-[0.98] opacity-0'
         }`}
       >
-        <div className="flex items-start justify-between border-b border-slate-200 px-6 py-4 sm:px-8">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Legal</p>
-            <h2 className="text-xl font-semibold text-slate-900">DM Growth — Terms &amp; Privacy</h2>
-            <p className="text-sm text-slate-500">Effective date: {legalMeta.effectiveDate}</p>
+        <div className="relative flex flex-col gap-3 border-b border-white/15 bg-transparent backdrop-blur-md px-6 py-5 sm:px-8">
+          <div className="text-center">
+            <p className="text-xs font-semibold uppercase tracking-wide text-white/70">Legal</p>
+            <h3 className="text-base font-semibold text-white">DM Growth - Terms &amp; Privacy</h3>
+            <p className="text-sm text-white/70">Effective date: {legalMeta.effectiveDate}</p>
           </div>
           <button
             onClick={onClose}
-            className="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700 transition hover:bg-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/10"
+            className="absolute right-6 top-5 rounded-full bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 sm:right-8 sm:top-6"
             aria-label="Close legal overlay"
           >
             Close
           </button>
-        </div>
-
-        <div className="flex items-center gap-3 border-b border-slate-200 px-6 py-3 sm:px-8">
           <button
             onClick={() => handleNavClick('terms')}
-            className={`rounded-full px-3 py-1 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/10 ${
+            className={`absolute left-6 top-5 rounded-full bg-white/15 px-4 py-2 text-sm font-semibold text-white min-w-[88px] transition hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 sm:left-8 sm:top-6 ${
               activeTab === 'terms'
-                ? 'bg-slate-900 text-white shadow-sm hover:bg-slate-800'
-                : 'bg-slate-100 text-slate-800 hover:bg-slate-200'
+                ? 'bg-white text-slate-900 shadow-sm hover:bg-white/90'
+                : 'bg-white/10 text-white hover:bg-white/20'
             }`}
           >
             Terms
           </button>
           <button
             onClick={() => handleNavClick('privacy')}
-            className={`rounded-full px-3 py-1 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/10 ${
+            className={`absolute left-6 top-5 rounded-full bg-white/15 px-4 py-2 text-sm font-semibold text-white min-w-[88px] transition hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 sm:left-8 sm:top-17 ${
               activeTab === 'privacy'
-                ? 'bg-slate-900 text-white shadow-sm hover:bg-slate-800'
-                : 'bg-slate-100 text-slate-800 hover:bg-slate-200'
+                ? 'bg-white text-slate-900 shadow-sm hover:bg-white/90'
+                : 'bg-white/10 text-white hover:bg-white/20'
             }`}
           >
             Privacy
@@ -156,10 +161,10 @@ export default function LegalOverlay({ openSection, onClose }: LegalOverlayProps
 
         <div
           ref={scrollContainerRef}
-          className="max-h-[70vh] overflow-y-auto px-6 py-6 sm:px-8 sm:py-8 space-y-10"
+          className="max-h-[75vh] overflow-y-auto px-6 py-6 sm:px-8 sm:py-8 space-y-10 text-white"
         >
           <TermsContent />
-          <hr className="border-slate-200" />
+          <hr className="border-white/15" />
           <PrivacyContent />
         </div>
       </div>
