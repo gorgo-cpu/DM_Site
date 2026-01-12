@@ -49,15 +49,17 @@ export default function LegalOverlay({ openSection, onClose }: LegalOverlayProps
   const scrollToSection = useCallback((id: string) => {
     const container = scrollContainerRef.current
     const el = document.getElementById(id)
+    const offset = window.innerWidth < 640 ? 275 : 150
 
     if (container && el) {
-      const top = Math.max(el.offsetTop - 150, 0) // land higher so the subtitle stays in view
+      const top = Math.max(el.offsetTop - offset, 0) // land higher so the subtitle stays in view
       container.scrollTo({ top, behavior: 'smooth' })
       return
     }
 
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      const top = Math.max(el.offsetTop - offset, 0)
+      window.scrollTo({ top, behavior: 'smooth' })
     }
   }, [])
 
@@ -132,7 +134,7 @@ export default function LegalOverlay({ openSection, onClose }: LegalOverlayProps
           </div>
           <button
             onClick={onClose}
-            className="absolute right-6 top-5 rounded-full bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 sm:right-8 sm:top-6"
+            className="order-3 self-center rounded-full bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 sm:absolute sm:order-none sm:right-8 sm:top-6 sm:self-auto"
             aria-label="Close legal overlay"
           >
             Close
