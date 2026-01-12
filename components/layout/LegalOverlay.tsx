@@ -165,7 +165,7 @@ export default function LegalOverlay({ openSection, onClose }: LegalOverlayProps
 
         <div
           ref={scrollContainerRef}
-          className="max-h-[75vh] overflow-y-auto px-6 py-6 pb-40 sm:px-8 sm:py-8 sm:pb-8 space-y-10 text-white"
+          className="max-h-[75vh] overflow-y-auto px-6 py-6 pb-57 sm:px-8 sm:py-8 sm:pb-8 space-y-10 text-white"
         >
           <TermsContent />
           <hr className="border-white/15" />
