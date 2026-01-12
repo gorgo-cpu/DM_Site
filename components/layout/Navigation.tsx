@@ -33,8 +33,15 @@ export default function Navigation() {
   ]
 
   const handleLogoClick = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
-    window.location.reload()
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual'
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+
+    setTimeout(() => {
+      window.location.href = window.location.href
+    }, 350)
   }
 
   return (
