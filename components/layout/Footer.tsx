@@ -58,18 +58,18 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <button
-                    onClick={() => setOpenLegal('privacy')}
-                    className="text-primary-400 hover:text-accent-500 transition-colors text-sm"
-                  >
-                    Privacy Policy
-                  </button>
-                </li>
-                <li>
-                  <button
                     onClick={() => setOpenLegal('terms')}
                     className="text-primary-400 hover:text-accent-500 transition-colors text-sm"
                   >
                     Terms &amp; Conditions
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => setOpenLegal('privacy')}
+                    className="text-primary-400 hover:text-accent-500 transition-colors text-sm"
+                  >
+                    Privacy Policy
                   </button>
                 </li>
               </ul>
