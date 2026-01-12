@@ -32,19 +32,22 @@ export default function Navigation() {
     { label: 'Pricing', href: 'pricing' },
   ]
 
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    window.location.reload()
+  }
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-primary-950/95 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300 ${
+        isScrolled ? 'bg-primary-950/95 shadow-lg' : 'bg-primary-950/80'
       }`}
     >
       <Container>
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <button
-            onClick={() => scrollToSection('hero')}
+            onClick={handleLogoClick}
             className="text-2xl font-bold tracking-tight text-white hover:text-accent-500 transition-colors"
           >
             DM<span className="text-accent-500">.</span>

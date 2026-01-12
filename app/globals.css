@@ -124,3 +124,18 @@ html {
   }
 }
 
+/* Legal overlay blur */
+#page-shell {
+  transition: filter var(--duration-base) var(--easing-ease), transform var(--duration-base) var(--easing-ease);
+}
+
+body.legal-open {
+  overflow: hidden;
+}
+
+body.legal-open #page-shell {
+  filter: blur(8px);
+  transform: scale(0.995);
+  pointer-events: none;
+  user-select: none;
+}

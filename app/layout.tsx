@@ -48,8 +48,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={plusJakarta.variable}>
-      <body className={plusJakarta.className}>{children}</body>
+      <body className={plusJakarta.className}>
+        <div id="page-shell" className="page-shell min-h-screen">
+          {children}
+        </div>
+      </body>
     </html>
   )
 }
-
