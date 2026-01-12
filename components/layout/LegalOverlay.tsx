@@ -125,10 +125,10 @@ export default function LegalOverlay({ openSection, onClose }: LegalOverlayProps
         }`}
       >
         <div className="relative flex flex-col gap-3 border-b border-white/15 bg-transparent backdrop-blur-md px-6 py-5 sm:px-8">
-          <div className="text-center">
-            <p className="text-xs font-semibold uppercase tracking-wide text-white/70">Legal</p>
-            <h3 className="text-base font-semibold text-white">DM Growth - Terms &amp; Privacy</h3>
-            <p className="text-sm text-white/70">Effective date: {legalMeta.effectiveDate}</p>
+          <div className="text-center sm:px-16">
+            <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-white/70">Legal</p>
+            <h3 className="text-sm sm:text-base font-semibold text-white">DM Growth - Terms &amp; Privacy</h3>
+            <p className="text-xs sm:text-sm text-white/70">Effective date: {legalMeta.effectiveDate}</p>
           </div>
           <button
             onClick={onClose}
@@ -137,26 +137,28 @@ export default function LegalOverlay({ openSection, onClose }: LegalOverlayProps
           >
             Close
           </button>
-          <button
-            onClick={() => handleNavClick('terms')}
-            className={`absolute left-6 top-5 rounded-full bg-white/15 px-4 py-2 text-sm font-semibold text-white min-w-[88px] transition hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 sm:left-8 sm:top-6 ${
-              activeTab === 'terms'
-                ? 'bg-white text-slate-900 shadow-sm hover:bg-white/90'
-                : 'bg-white/10 text-white hover:bg-white/20'
-            }`}
-          >
-            Terms
-          </button>
-          <button
-            onClick={() => handleNavClick('privacy')}
-            className={`absolute left-6 top-5 rounded-full bg-white/15 px-4 py-2 text-sm font-semibold text-white min-w-[88px] transition hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 sm:left-8 sm:top-17 ${
-              activeTab === 'privacy'
-                ? 'bg-white text-slate-900 shadow-sm hover:bg-white/90'
-                : 'bg-white/10 text-white hover:bg-white/20'
-            }`}
-          >
-            Privacy
-          </button>
+          <div className="mt-2 flex w-full items-center justify-center gap-3 sm:absolute sm:left-8 sm:top-6 sm:mt-0 sm:w-auto sm:flex-col sm:items-start">
+            <button
+              onClick={() => handleNavClick('terms')}
+              className={`w-full min-w-[88px] rounded-full bg-white/15 px-4 py-2 text-center text-sm font-semibold text-white transition hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 sm:w-auto ${
+                activeTab === 'terms'
+                  ? 'bg-white text-slate-900 shadow-sm hover:bg-white/90'
+                  : 'bg-white/10 text-white hover:bg-white/20'
+              }`}
+            >
+              Terms
+            </button>
+            <button
+              onClick={() => handleNavClick('privacy')}
+              className={`w-full min-w-[88px] rounded-full bg-white/15 px-4 py-2 text-center text-sm font-semibold text-white transition hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 sm:w-auto ${
+                activeTab === 'privacy'
+                  ? 'bg-white text-slate-900 shadow-sm hover:bg-white/90'
+                  : 'bg-white/10 text-white hover:bg-white/20'
+              }`}
+            >
+              Privacy
+            </button>
+          </div>
         </div>
 
         <div
