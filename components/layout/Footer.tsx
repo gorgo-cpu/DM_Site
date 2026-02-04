@@ -97,7 +97,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="mailto:david@dm-growth.com"
+                    href="mailto:georg@dm-growth.com"
                     className="hover:text-accent-500 transition-colors"
                   >
                     georg@dm-growth.com (DACH Region)
