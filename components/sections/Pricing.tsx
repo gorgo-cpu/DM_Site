@@ -26,7 +26,7 @@ const pricingTiers = [
     description: 'Perfect for those who want maximum outreach and guaranteed results',
     features: [
       'Everything in Managed Outbound',
-      'Outreach to 5,000+ leads/month',
+      'Outreach to 1,500+ leads/month',
       'Multiple campaign sequences',
       'Priority response handling',
       'Meeting scheduling & qualification',
