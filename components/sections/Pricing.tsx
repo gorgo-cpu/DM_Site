@@ -18,22 +18,6 @@ const pricingTiers = [
       '1 campaign template',
       'Setup documentation',
     ],
-    highlighted: false,
-  },
-  {
-    name: 'Managed Outbound',
-    price: '',
-    period: '',
-    description: 'Perfect for those who want qualified meetings delivered monthly',
-    features: [
-      'Everything in Infrastructure Build',
-      'Outreach to 1,500 leads/month',
-      'Optimized copywriting',
-      'Response handling & qualification',
-      'Meeting scheduling (in your calendar)',
-      'Monthly performance reports',
-    ],
-    highlighted: true,
   },
   {
     name: 'Done-For-You Outbound',
@@ -49,7 +33,6 @@ const pricingTiers = [
       '4 meetings/month with our team',
       'Weekly strategy calls',
     ],
-    highlighted: false,
   },
 ]
 
@@ -78,23 +61,10 @@ export default function Pricing() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {pricingTiers.map((tier, index) => (
             <ScrollReveal key={index} delay={index * 100}>
-              <Card
-                className={`h-full flex flex-col ${
-                  tier.highlighted
-                    ? 'ring-2 ring-accent-500 scale-105 md:scale-110'
-                    : ''
-                }`}
-                hover={!tier.highlighted}
-              >
-                {tier.highlighted && (
-                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-accent-500 text-white text-sm font-semibold rounded-full">
-                    Most Popular
-                  </div>
-                )}
-
+              <Card className="h-full flex flex-col" hover>
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {tier.name}
@@ -131,11 +101,7 @@ export default function Pricing() {
                   ))}
                 </ul>
 
-                <Button
-                  variant={tier.highlighted ? 'primary' : 'secondary'}
-                  className="w-full"
-                  onClick={() => scrollToSection('contact')}
-                >
+                <Button variant="secondary" className="w-full" onClick={() => scrollToSection('contact')}>
                   {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                 </Button>
               </Card>
