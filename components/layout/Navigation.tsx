@@ -29,7 +29,6 @@ export default function Navigation() {
     { label: 'Solutions', href: 'solution' },
     { label: 'Process', href: 'process' },
     { label: 'Results', href: 'results' },
-    { label: 'Pricing', href: 'pricing' },
   ]
 
   const handleLogoClick = () => {
