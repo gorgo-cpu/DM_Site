@@ -39,7 +39,7 @@ export default function Footer() {
             <div>
               <h4 className="font-semibold text-primary-200 mb-4">Navigation</h4>
               <ul className="space-y-2">
-                {['solution', 'process', 'results', 'pricing'].map((section) => (
+                {['solution', 'process', 'results'].map((section) => (
                   <li key={section}>
                     <button
                       onClick={() => scrollToSection(section)}
