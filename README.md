@@ -1,4 +1,4 @@
-# DM Site - Premium Marketing Website
+# DM Growth 
 
 A high-end, conversion-optimized marketing website built with Next.js 14, TypeScript, Tailwind CSS, and Anime.js. Features smooth animations, a working contact form with email delivery, and production-grade performance.
 
