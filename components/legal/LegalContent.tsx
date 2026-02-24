@@ -136,7 +136,7 @@ export function PrivacyContent() {
           <h3 className="text-lg font-semibold text-white">Controller</h3>
           <p>{COMPANY_DETAILS.name || BRAND_NAME}</p>
           {hasAddress && <p>{COMPANY_DETAILS.address}</p>}
-          {hasRepresentative && <p>Represented by: {COMPANY_DETAILS.representative}</p>}
+          {hasRepresentative && <p>{/*COMPANY_DETAILS.representative*/}</p>}
           {hasDpo && (
             <p className="text-white/80">
               Data Protection Officer: {DPO_DETAILS.name}, {DPO_DETAILS.address}, Tel: {DPO_DETAILS.phone}, Email: {DPO_DETAILS.email}
