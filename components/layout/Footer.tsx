@@ -31,7 +31,7 @@ export default function Footer() {
                 We build automated sales engines that fill your calendar with qualified B2B meetings.
               </p>
               <p className="text-primary-400 text-sm mt-4">
-                Situated in Bucharest, Romania.
+                
               </p>
             </div>
 
@@ -84,7 +84,7 @@ export default function Footer() {
                     href="mailto:david@dm-growth.com"
                     className="hover:text-accent-500 transition-colors"
                   >
-                    david@dm-growth.com
+                    
                   </a>
                 </li>
                 <li>
@@ -92,7 +92,7 @@ export default function Footer() {
                     href="tel:+40731836462"
                     className="hover:text-accent-500 transition-colors"
                   >
-                    +40 731 836 462
+                   
                   </a>
                 </li>
                 <li>
