@@ -5,8 +5,9 @@
   /* Color Tokens */
   --color-primary: #0f172a;
   --color-primary-light: #1e293b;
-  --color-accent: #06b6d4;
-  --color-accent-dark: #0891b2;
+  --color-accent: #c8ff00;
+  --color-accent-dim: #a3cc00;
+  --accent-glow: rgba(200, 255, 0, 0.08);
   --color-surface: #020617;
   --color-surface-light: #0f172a;
   --color-text-primary: #f8fafc;
@@ -92,7 +93,7 @@ a:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px #020617, 0 0 0 4px #06b6d4;
+  box-shadow: 0 0 0 2px #020617, 0 0 0 4px #c8ff00;
 }
 
 .text-balance {

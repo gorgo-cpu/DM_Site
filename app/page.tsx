@@ -2,11 +2,11 @@ import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
 import Problems from '@/components/sections/Problems'
-import Solution from '@/components/sections/Solution'
-import Process from '@/components/sections/Process'
-import Results from '@/components/sections/Results'
-import FinalCTA from '@/components/sections/FinalCTA'
-import ContactForm from '@/components/sections/ContactForm'
+import Pillars from '@/components/sections/Pillars'
+import Signals from '@/components/sections/Signals'
+import Infrastructure from '@/components/sections/Infrastructure'
+import Markets from '@/components/sections/Markets'
+import StartHere from '@/components/sections/StartHere'
 
 export default function Home() {
   return (
@@ -15,16 +15,13 @@ export default function Home() {
       <main>
         <Hero />
         <Problems />
-        <Solution />
-        <Process />
-        <Results />
-        <FinalCTA />
-        <ContactForm />
+        <Pillars />
+        <Signals />
+        <Infrastructure />
+        <Markets />
+        <StartHere />
       </main>
       <Footer />
     </>
   )
 }
-
-
-

@@ -1,107 +1,107 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import * as animeModule from 'animejs'
 import Container from '@/components/ui/Container'
-import Button from '@/components/ui/Button'
+
+const anime = (animeModule as any).default || animeModule
+
+const proofItems = [
+  {
+    label: 'INFRASTRUCTURE',
+    text: 'Private sending systems, not shared SaaS',
+  },
+  {
+    label: 'TARGETING',
+    text: 'Live buying signals, not static databases',
+  },
+  {
+    label: 'OWNERSHIP',
+    text: 'Domains, data, and systems transfer to you',
+  },
+]
 
 export default function Hero() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches
+
+    if (prefersReducedMotion || !ref.current) return
+
+    const blocks = ref.current.querySelectorAll('.hero-reveal')
+
+    anime({
+      targets: blocks,
+      opacity: [0, 1],
+      translateY: [30, 0],
+      easing: 'easeOutExpo',
+      duration: 1000,
+      delay: anime.stagger(120, { start: 200 }),
+    })
+  }, [])
 
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950"
+      className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
-
-      <Container className="relative z-10 pt-20">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Animated headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
-            Personalized outbound that brings in high-paying clients.
-            <span className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
-              
-            </span>
-          </h1>
-
-          <p className="text-lg md:text-xl text-primary-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-            With our proven system, we'll use our outbound systems to position your company as the go-to expert in your niche. We'll grow your company together and generate predictable income.
+      <Container className="relative z-10 pt-32 pb-20">
+        <div ref={ref} className="max-w-4xl">
+          <p className="hero-reveal opacity-0 font-mono text-xs tracking-[2px] uppercase text-accent-500">
+            OUTBOUND INFRASTRUCTURE &mdash; NOT ANOTHER AGENCY
           </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              onClick={() => scrollToSection('contact')}
+          <h1 className="hero-reveal opacity-0 mt-8 text-[clamp(40px,6vw,72px)] font-bold tracking-tight leading-[1.1]">
+            Most agencies rent you leads.
+            <br />
+            We install the{' '}
+            <span className="text-accent-500">engine</span> that makes
+            them.
+          </h1>
+
+          <p className="hero-reveal opacity-0 mt-8 text-[19px] font-light text-primary-300 leading-[1.7] max-w-[600px]">
+            Your outbound shouldn&apos;t depend on someone else&apos;s login
+            credentials. We build revenue infrastructure you own, operate,
+            and keep, even if we part ways.
+          </p>
+
+          <div className="hero-reveal opacity-0 mt-10 flex flex-col sm:flex-row gap-4">
+            <a
+              href="mailto:david@datamodulator.ro?subject=Territory%20Snapshot%20Request"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-accent-500 text-primary-950 transition-all duration-300 hover:bg-accent-600 hover:scale-[1.02] active:scale-[0.98]"
             >
-              Get Started Now
-            </Button>
-            <Button
-              variant="secondary"
-              size="lg"
-              onClick={() => scrollToSection('solution')}
+              Get a territory snapshot
+              <span className="ml-2">&rarr;</span>
+            </a>
+            <button
+              onClick={() =>
+                document
+                  .getElementById('approach')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full border-2 border-primary-600 text-primary-50 transition-all duration-300 hover:border-primary-400 hover:scale-[1.02] active:scale-[0.98]"
             >
-              Explore Solutions
-            </Button>
+              See how it works
+            </button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-primary-800">
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-accent-500 mb-2">
-                250+
+          <div className="hero-reveal opacity-0 mt-16 pt-8 border-t border-primary-800 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {proofItems.map((item) => (
+              <div key={item.label}>
+                <p className="font-mono text-[11px] tracking-[1.5px] uppercase text-accent-500 mb-2">
+                  {item.label}
+                </p>
+                <p className="text-sm text-primary-400 leading-relaxed">
+                  {item.text}
+                </p>
               </div>
-              <div className="text-sm md:text-base text-primary-400">
-                Qualified Meetings
-              </div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-accent-500 mb-2">
-                22%
-              </div>
-              <div className="text-sm md:text-base text-primary-400">
-                Average Reply Rate
-              </div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-accent-500 mb-2">
-                10K+
-              </div>
-              <div className="text-sm md:text-base text-primary-400">
-                Decision Makers Engaged
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </Container>
-
-      {/* Scroll indicator 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="animate-bounce">
-          <svg
-            className="w-6 h-6 text-primary-400"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
-        </div>
-      </div>*/}
     </section>
   )
 }
-
-

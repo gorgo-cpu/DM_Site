@@ -2,11 +2,9 @@
 
 import React, { useState, useEffect } from 'react'
 import Container from '@/components/ui/Container'
-import Button from '@/components/ui/Button'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,115 +19,63 @@ export default function Navigation() {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
-      setIsMobileMenuOpen(false)
     }
+  }
+
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }
 
   const navLinks = [
-    { label: 'Solutions', href: 'solution' },
-    { label: 'Process', href: 'process' },
-    { label: 'Results', href: 'results' },
+    { label: 'Approach', href: 'approach' },
+    { label: 'Infrastructure', href: 'infrastructure' },
+    { label: 'Markets', href: 'markets' },
   ]
-
-  const handleLogoClick = () => {
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual'
-    }
-
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-
-    setTimeout(() => {
-      window.location.href = window.location.href
-    }, 350)
-  }
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300 ${
-        isScrolled ? 'bg-primary-950/95 shadow-lg' : 'bg-primary-950/80'
+        isScrolled
+          ? 'bg-primary-950/95 border-b border-primary-800'
+          : 'bg-primary-950/80'
       }`}
     >
       <Container>
-        <nav className="flex items-center justify-between h-20">
-          {/* Logo */}
+        <nav className="flex items-center justify-between h-16" aria-label="Main navigation">
+          {/* Brand */}
           <button
             onClick={handleLogoClick}
-            className="text-2xl font-bold tracking-tight text-white hover:text-accent-500 transition-colors"
+            className="flex items-baseline gap-2"
+            aria-label="Scroll to top"
           >
-            DM<span className="text-accent-500">.</span>
+            <span className="text-[22px] font-bold tracking-tight text-white">
+              DM Growth
+            </span>
+            <span className="font-mono text-[11px] text-primary-500 hidden sm:inline">
+              by DataModulator
+            </span>
           </button>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop nav - hidden below sm (640px) */}
+          <div className="hidden sm:flex items-center gap-8">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="text-primary-200 hover:text-accent-500 transition-colors font-medium"
+                className="text-sm text-primary-400 hover:text-primary-200 transition-colors"
               >
                 {link.label}
               </button>
             ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button onClick={() => scrollToSection('contact')} size="sm">
-              Get Started
-            </Button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-primary-200 hover:text-accent-500 transition-colors"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-            aria-expanded={isMobileMenuOpen}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+            <button
+              onClick={() => scrollToSection('start')}
+              className="px-4 py-2 text-sm font-semibold rounded-full bg-accent-500 text-primary-950 transition-all duration-300 hover:bg-accent-600 hover:scale-[1.02] active:scale-[0.98]"
             >
-              {isMobileMenuOpen ? (
-                <path d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </nav>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-primary-800">
-            <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => scrollToSection(link.href)}
-                  className="text-primary-200 hover:text-accent-500 transition-colors font-medium text-left"
-                >
-                  {link.label}
-                </button>
-              ))}
-              <Button
-                onClick={() => scrollToSection('contact')}
-                className="w-full"
-              >
-                Get Started
-              </Button>
-            </div>
+              Start here &rarr;
+            </button>
           </div>
-        )}
+        </nav>
       </Container>
     </header>
   )
 }
-
-
-
