@@ -1,10 +1,14 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 import Container from '@/components/ui/Container'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
+  const isHome = pathname === '/'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,18 +19,26 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+  const handleSectionClick = (sectionId: string) => {
+    if (isHome) {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      window.location.href = `/#${sectionId}`
     }
   }
 
   const handleLogoClick = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    if (isHome) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    } else {
+      window.location.href = '/'
+    }
   }
 
-  const navLinks = [
+  const sectionLinks = [
     { label: 'Approach', href: 'approach' },
     { label: 'Infrastructure', href: 'infrastructure' },
     { label: 'Markets', href: 'markets' },
@@ -46,7 +58,7 @@ export default function Navigation() {
           <button
             onClick={handleLogoClick}
             className="flex items-baseline gap-2"
-            aria-label="Scroll to top"
+            aria-label="Home"
           >
             <span className="text-[22px] font-bold tracking-tight text-white">
               DM Growth
@@ -58,17 +70,27 @@ export default function Navigation() {
 
           {/* Desktop nav - hidden below sm (640px) */}
           <div className="hidden sm:flex items-center gap-8">
-            {navLinks.map((link) => (
+            <Link
+              href="/market-intelligence"
+              className={`text-sm transition-colors ${
+                pathname === '/market-intelligence'
+                  ? 'text-accent-500'
+                  : 'text-primary-400 hover:text-primary-200'
+              }`}
+            >
+              Market Intelligence
+            </Link>
+            {sectionLinks.map((link) => (
               <button
                 key={link.href}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => handleSectionClick(link.href)}
                 className="text-sm text-primary-400 hover:text-primary-200 transition-colors"
               >
                 {link.label}
               </button>
             ))}
             <button
-              onClick={() => scrollToSection('start')}
+              onClick={() => handleSectionClick('start')}
               className="px-4 py-2 text-sm font-semibold rounded-full bg-accent-500 text-primary-950 transition-all duration-300 hover:bg-accent-600 hover:scale-[1.02] active:scale-[0.98]"
             >
               Start here &rarr;

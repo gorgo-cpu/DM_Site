@@ -1,9 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react'
-import * as animeModule from 'animejs'
-
-const anime = (animeModule as any).default || animeModule
+import { animate, stagger } from 'animejs'
 
 interface HeroAnimationProps {
   children: React.ReactNode
@@ -22,13 +20,12 @@ export default function HeroAnimation({ children, className = '' }: HeroAnimatio
 
     const words = ref.current.querySelectorAll('.word')
 
-    anime({
-      targets: words,
+    animate(words, {
       opacity: [0, 1],
       translateY: [40, 0],
       easing: 'easeOutExpo',
       duration: 1200,
-      delay: anime.stagger(60, { start: 200 }),
+      delay: stagger(60, { start: 200 }),
     })
   }, [])
 

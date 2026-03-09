@@ -1,10 +1,8 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react'
-import * as animeModule from 'animejs'
+import { animate, stagger } from 'animejs'
 import Container from '@/components/ui/Container'
-
-const anime = (animeModule as any).default || animeModule
 
 const proofItems = [
   {
@@ -33,13 +31,12 @@ export default function Hero() {
 
     const blocks = ref.current.querySelectorAll('.hero-reveal')
 
-    anime({
-      targets: blocks,
+    animate(blocks, {
       opacity: [0, 1],
       translateY: [30, 0],
       easing: 'easeOutExpo',
       duration: 1000,
-      delay: anime.stagger(120, { start: 200 }),
+      delay: stagger(120, { start: 200 }),
     })
   }, [])
 
