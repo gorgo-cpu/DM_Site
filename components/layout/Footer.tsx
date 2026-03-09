@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Link from 'next/link'
 import Container from '@/components/ui/Container'
 import LegalOverlay from '@/components/layout/LegalOverlay'
 import type { LegalSection } from '@/components/legal/LegalContent'
@@ -34,8 +35,15 @@ export default function Footer() {
                 NAVIGATE
               </p>
               <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/approach"
+                    className="text-sm text-primary-400 hover:text-primary-200 transition-colors"
+                  >
+                    Approach
+                  </Link>
+                </li>
                 {[
-                  { label: 'Approach', href: 'approach' },
                   { label: 'Infrastructure', href: 'infrastructure' },
                   { label: 'Markets', href: 'markets' },
                   { label: 'Start here', href: 'start' },

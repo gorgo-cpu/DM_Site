@@ -3,15 +3,25 @@
 import React from 'react'
 import Container from '@/components/ui/Container'
 import ScrollReveal from '@/components/layout/ScrollReveal'
+import { useContactModal } from '@/components/layout/ContactModalProvider'
+import type { ContactPreset } from '@/components/layout/ContactModal'
 
-const tiers = [
+const tiers: {
+  tier: string
+  title: string
+  body: string
+  ctaLabel: string
+  primary: boolean
+  preset: ContactPreset
+  featured: boolean
+}[] = [
   {
     tier: 'EXPLORE',
     title: 'Territory Snapshot',
     body: 'A focused market intelligence sample for one industry in one region. See how signal-based targeting compares to your current lists. Free, no commitment.',
     ctaLabel: 'Request snapshot',
     primary: false,
-    href: 'mailto:david@datamodulator.ro?subject=Territory%20Snapshot%20Request',
+    preset: 'territory-snapshot',
     featured: false,
   },
   {
@@ -20,7 +30,7 @@ const tiers = [
     body: 'We look at your current sending setup, domain health, and outbound architecture. You get an honest assessment and a clear path forward. 15 minutes.',
     ctaLabel: 'Book audit',
     primary: true,
-    href: 'mailto:david@datamodulator.ro?subject=Infrastructure%20Audit%20Request',
+    preset: 'infrastructure-audit',
     featured: true,
   },
   {
@@ -29,12 +39,14 @@ const tiers = [
     body: 'For companies ready to install revenue infrastructure. We scope the build, map the target market, and present a concrete investment case with projected ROI.',
     ctaLabel: 'Request proposal',
     primary: false,
-    href: 'mailto:david@datamodulator.ro?subject=Full%20Proposal%20Request',
+    preset: 'full-proposal',
     featured: false,
   },
 ]
 
 export default function StartHere() {
+  const { openModal } = useContactModal()
+
   return (
     <section id="start" className="py-24 md:py-32">
       <Container>
@@ -74,8 +86,8 @@ export default function StartHere() {
                 <p className="text-sm text-primary-400 leading-[1.75] mb-8 flex-1">
                   {tier.body}
                 </p>
-                <a
-                  href={tier.href}
+                <button
+                  onClick={() => openModal(tier.preset)}
                   className={`inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-full transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
                     tier.primary
                       ? 'bg-accent-500 text-primary-950 hover:bg-accent-600'
@@ -84,7 +96,7 @@ export default function StartHere() {
                 >
                   {tier.ctaLabel}
                   <span className="ml-2">&rarr;</span>
-                </a>
+                </button>
               </div>
             </ScrollReveal>
           ))}

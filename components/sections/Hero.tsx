@@ -2,7 +2,9 @@
 
 import React, { useEffect, useRef } from 'react'
 import { animate, stagger } from 'animejs'
+import Link from 'next/link'
 import Container from '@/components/ui/Container'
+import { useContactModal } from '@/components/layout/ContactModalProvider'
 
 const proofItems = [
   {
@@ -20,6 +22,7 @@ const proofItems = [
 ]
 
 export default function Hero() {
+  const { openModal } = useContactModal()
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -48,7 +51,7 @@ export default function Hero() {
       <Container className="relative z-10 pt-32 pb-20">
         <div ref={ref} className="max-w-4xl">
           <p className="hero-reveal opacity-0 font-mono text-xs tracking-[2px] uppercase text-accent-500">
-            OUTBOUND INFRASTRUCTURE &mdash; NOT ANOTHER AGENCY
+            OUTBOUND INFRASTRUCTURE, NOT ANOTHER AGENCY
           </p>
 
           <h1 className="hero-reveal opacity-0 mt-8 text-[clamp(40px,6vw,72px)] font-bold tracking-tight leading-[1.1]">
@@ -66,23 +69,19 @@ export default function Hero() {
           </p>
 
           <div className="hero-reveal opacity-0 mt-10 flex flex-col sm:flex-row gap-4">
-            <a
-              href="mailto:david@datamodulator.ro?subject=Territory%20Snapshot%20Request"
+            <button
+              onClick={() => openModal('territory-snapshot')}
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-accent-500 text-primary-950 transition-all duration-300 hover:bg-accent-600 hover:scale-[1.02] active:scale-[0.98]"
             >
               Get a territory snapshot
               <span className="ml-2">&rarr;</span>
-            </a>
-            <button
-              onClick={() =>
-                document
-                  .getElementById('approach')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-              }
+            </button>
+            <Link
+              href="/approach"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full border-2 border-primary-600 text-primary-50 transition-all duration-300 hover:border-primary-400 hover:scale-[1.02] active:scale-[0.98]"
             >
               See how it works
-            </button>
+            </Link>
           </div>
 
           <div className="hero-reveal opacity-0 mt-16 pt-8 border-t border-primary-800 grid grid-cols-1 sm:grid-cols-3 gap-6">

@@ -4,9 +4,11 @@ import React, { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Container from '@/components/ui/Container'
+import { useContactModal } from '@/components/layout/ContactModalProvider'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const { openModal } = useContactModal()
   const pathname = usePathname()
   const isHome = pathname === '/'
 
@@ -39,9 +41,13 @@ export default function Navigation() {
   }
 
   const sectionLinks = [
-    { label: 'Approach', href: 'approach' },
     { label: 'Infrastructure', href: 'infrastructure' },
     { label: 'Markets', href: 'markets' },
+  ]
+
+  const pageLinks = [
+    { label: 'Market Intelligence', href: '/market-intelligence' },
+    { label: 'Approach', href: '/approach' },
   ]
 
   return (
@@ -70,16 +76,19 @@ export default function Navigation() {
 
           {/* Desktop nav - hidden below sm (640px) */}
           <div className="hidden sm:flex items-center gap-8">
-            <Link
-              href="/market-intelligence"
-              className={`text-sm transition-colors ${
-                pathname === '/market-intelligence'
-                  ? 'text-accent-500'
-                  : 'text-primary-400 hover:text-primary-200'
-              }`}
-            >
-              Market Intelligence
-            </Link>
+            {pageLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm transition-colors ${
+                  pathname === link.href
+                    ? 'text-accent-500'
+                    : 'text-primary-400 hover:text-primary-200'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
             {sectionLinks.map((link) => (
               <button
                 key={link.href}
@@ -90,7 +99,7 @@ export default function Navigation() {
               </button>
             ))}
             <button
-              onClick={() => handleSectionClick('start')}
+              onClick={() => openModal('general')}
               className="px-4 py-2 text-sm font-semibold rounded-full bg-accent-500 text-primary-950 transition-all duration-300 hover:bg-accent-600 hover:scale-[1.02] active:scale-[0.98]"
             >
               Start here &rarr;

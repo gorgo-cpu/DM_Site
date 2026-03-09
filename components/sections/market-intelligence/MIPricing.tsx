@@ -1,10 +1,22 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 import Container from '@/components/ui/Container'
 import ScrollReveal from '@/components/layout/ScrollReveal'
+import { useContactModal } from '@/components/layout/ContactModalProvider'
+import type { ContactPreset } from '@/components/layout/ContactModal'
 
-const options = [
+const options: {
+  tier: string
+  title: string
+  subtitle: string
+  body: string
+  ctaLabel: string
+  primary: boolean
+  preset: ContactPreset
+  featured: boolean
+}[] = [
   {
     tier: 'SNAPSHOT',
     title: 'Territory Snapshot',
@@ -12,7 +24,7 @@ const options = [
     body: 'A focused sample covering one industry in one region. Enough to see the methodology and compare against your current lists. We send it within 3 business days.',
     ctaLabel: 'Request free snapshot',
     primary: false,
-    href: 'mailto:david@datamodulator.ro?subject=Free%20Territory%20Snapshot',
+    preset: 'territory-snapshot',
     featured: false,
   },
   {
@@ -22,12 +34,14 @@ const options = [
     body: 'Complete multi-tab workbook covering your full target territory. Multiple industries, multiple regions, competitor deduplication, priority/watchlist segmentation. Delivered within 5-10 business days depending on scope.',
     ctaLabel: 'Request scoping call',
     primary: true,
-    href: 'mailto:david@datamodulator.ro?subject=Market%20Intelligence%20Full%20Report',
+    preset: 'market-intelligence',
     featured: true,
   },
 ]
 
 export default function MIPricing() {
+  const { openModal } = useContactModal()
+
   return (
     <section id="pricing" className="py-24 md:py-32">
       <Container>
@@ -67,8 +81,8 @@ export default function MIPricing() {
                 <p className="text-sm text-primary-400 leading-[1.75] mb-8 flex-1">
                   {option.body}
                 </p>
-                <a
-                  href={option.href}
+                <button
+                  onClick={() => openModal(option.preset)}
                   className={`inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-full transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
                     option.primary
                       ? 'bg-accent-500 text-primary-950 hover:bg-accent-600'
@@ -77,7 +91,7 @@ export default function MIPricing() {
                 >
                   {option.ctaLabel}
                   <span className="ml-2">&rarr;</span>
-                </a>
+                </button>
               </div>
             </ScrollReveal>
           ))}
@@ -89,13 +103,13 @@ export default function MIPricing() {
               Already have your intelligence? The natural next step is infrastructure.
               We build the outbound system that executes on it.
             </p>
-            <a
-              href="/#infrastructure"
+            <Link
+              href="/approach#model"
               className="inline-flex items-center text-sm text-accent-500 hover:text-accent-400 transition-colors mt-3 font-medium"
             >
               See how we build infrastructure
               <span className="ml-2">&rarr;</span>
-            </a>
+            </Link>
           </div>
         </ScrollReveal>
       </Container>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
+import ContactModalProvider from '@/components/layout/ContactModalProvider'
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -49,9 +50,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={plusJakarta.variable}>
       <body className={plusJakarta.className}>
-        <div id="page-shell" className="page-shell min-h-screen">
-          {children}
-        </div>
+        <ContactModalProvider>
+          <div id="page-shell" className="page-shell min-h-screen">
+            {children}
+          </div>
+        </ContactModalProvider>
       </body>
     </html>
   )

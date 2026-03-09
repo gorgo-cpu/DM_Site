@@ -45,7 +45,7 @@ export default function MIProof() {
               {/* Left: The story */}
               <div className="p-8 lg:p-12">
                 <p className="font-mono text-[11px] tracking-[1.5px] uppercase text-accent-500 mb-6">
-                  TECHNICAL RECRUITING &mdash; DACH &amp; UK
+                  TECHNICAL RECRUITING, DACH &amp; UK
                 </p>
 
                 <div className="space-y-4">

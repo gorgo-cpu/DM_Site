@@ -3,10 +3,8 @@
 import React, { useEffect, useRef } from 'react'
 import { animate, stagger } from 'animejs'
 import Container from '@/components/ui/Container'
-import { useContactModal } from '@/components/layout/ContactModalProvider'
 
-export default function MIHero() {
-  const { openModal } = useContactModal()
+export default function ApproachHero() {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -29,33 +27,23 @@ export default function MIHero() {
 
   return (
     <section
-      id="mi-hero"
+      id="approach-hero"
       className="relative min-h-[80vh] flex items-center overflow-hidden"
     >
       <Container className="relative z-10 pt-32 pb-20">
         <div ref={ref} className="max-w-3xl">
           <p className="hero-reveal opacity-0 font-mono text-xs tracking-[2px] uppercase text-accent-500">
-            MARKET INTELLIGENCE
+            HOW WE&apos;RE DIFFERENT
           </p>
 
           <h1 className="hero-reveal opacity-0 mt-8 text-[clamp(36px,5vw,56px)] font-bold tracking-tight leading-[1.1]">
-            Know exactly who needs you before you send a single email.
+            Most agencies sell services. We install systems.
           </h1>
 
           <p className="hero-reveal opacity-0 mt-8 text-[18px] font-light text-primary-300 leading-[1.7] max-w-[600px]">
-            A structured market map of your target territory, built from live buying signals.
-            Not a contact list. Not a database export. A prioritized intelligence workbook you keep and act on.
+            The difference isn&apos;t positioning. It&apos;s structural. Here&apos;s how we think
+            about outbound, and why it changes what you get.
           </p>
-
-          <div className="hero-reveal opacity-0 mt-10">
-            <button
-              onClick={() => openModal('territory-snapshot')}
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-accent-500 text-primary-950 transition-all duration-300 hover:bg-accent-600 hover:scale-[1.02] active:scale-[0.98]"
-            >
-              Request a territory snapshot
-              <span className="ml-2">&rarr;</span>
-            </button>
-          </div>
         </div>
       </Container>
     </section>
