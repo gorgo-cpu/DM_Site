@@ -31,10 +31,10 @@ const markets = [
     flag: '\ud83c\uddf7\ud83c\uddf4',
     label: 'ROMANIA',
     subtitle: '',
-    body: 'A maturing B2B market where relationships and hierarchy still drive decisions. English is the standard for tech outreach, but local market context and credibility signals make the difference.',
+    body: 'Romanian B2B outreach is conducted in Romanian. Relationships and hierarchy drive decisions in this market, the right tone and formality level make the difference between a reply and a delete. We combine local language fluency with the same signal-based targeting methodology used across all our markets.',
     details: [
-      'English-language outreach with local market intelligence',
-      'Higher-formality positioning for Romanian business culture',
+      'Romanian-language outreach and follow-up',
+      'Adapted formality for local business culture',
       'IT services, software development, professional services verticals',
     ],
   },

@@ -69,7 +69,7 @@ export default function Navigation() {
             <span className="text-[22px] font-bold tracking-tight text-white">
               DM Growth
             </span>
-            <span className="font-mono text-[11px] text-primary-500 hidden sm:inline">
+            <span className="text-[12px] font-light text-primary-500 hidden sm:inline">
               by DataModulator
             </span>
           </button>

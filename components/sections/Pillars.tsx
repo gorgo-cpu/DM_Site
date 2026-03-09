@@ -27,7 +27,7 @@ const pillars = [
     title: 'Messages that sound like you, not like AI',
     body: 'We study how you actually write, your sentence structures, your tone, your sign-offs, and replicate it. Your prospects can\u2019t tell the difference between you and our system. That\u2019s by design.',
     deliverablesLabel: 'THE DIFFERENCE',
-    deliverables: 'Identity-matched writing per sender. Cultural routing for DACH, UK, and RO markets. Every message is researched before it\u2019s written, never template-first.',
+    deliverables: 'Identity-matched writing per sender. Cultural routing for DACH (German), UK (English), and Romania (Romanian). Every message is researched before it\u2019s written, never template-first.',
   },
 ]
 
@@ -53,10 +53,10 @@ export default function Pillars() {
           {pillars.map((pillar, index) => (
             <ScrollReveal key={index} delay={index * 120}>
               <div className="relative border border-primary-800 rounded-lg p-8 h-full bg-primary-950 overflow-hidden">
-                <span className="absolute top-6 right-8 text-[80px] font-bold text-primary-800/50 leading-none select-none pointer-events-none">
+                <span className="absolute top-2 right-4 text-[56px] font-bold text-white/[0.07] leading-none select-none pointer-events-none">
                   {pillar.number}
                 </span>
-                <div className="relative">
+                <div className="relative z-10">
                   <p className="font-mono text-[11px] tracking-[1.5px] uppercase text-accent-500 mb-4">
                     {pillar.label}
                   </p>

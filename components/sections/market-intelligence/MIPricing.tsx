@@ -62,14 +62,16 @@ export default function MIPricing() {
               <div
                 className={`relative rounded-lg p-8 h-full flex flex-col ${
                   option.featured
-                    ? 'border-2 border-accent-500/40 bg-accent-500/[0.03]'
+                    ? 'border border-accent-500 bg-gradient-to-b from-accent-500/[0.03] to-transparent'
                     : 'border border-primary-800 bg-primary-950'
                 }`}
               >
                 {option.featured && (
                   <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-accent-500/60 to-transparent" />
                 )}
-                <p className="font-mono text-[11px] tracking-[1.5px] uppercase text-primary-500 mb-2">
+                <p className={`font-mono text-[11px] tracking-[1.5px] uppercase mb-2 ${
+                  option.featured ? 'text-accent-500' : 'text-primary-500'
+                }`}>
                   {option.tier}
                 </p>
                 <h3 className="text-xl font-semibold tracking-tight text-primary-50 mb-1">

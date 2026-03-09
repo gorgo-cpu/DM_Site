@@ -72,7 +72,7 @@ export default function MIProblem() {
                       key={i}
                       className="flex items-start gap-2.5 font-mono text-xs text-primary-600"
                     >
-                      <span className="shrink-0 mt-px">&times;</span>
+                      <span className="shrink-0 mt-px">×</span>
                       <span className="line-through">{item}</span>
                     </li>
                   ))}
@@ -90,7 +90,7 @@ export default function MIProblem() {
                       key={i}
                       className="flex items-start gap-2.5 font-mono text-xs text-primary-300"
                     >
-                      <span className="text-accent-500 shrink-0 mt-px">&check;</span>
+                      <span className="text-accent-500 shrink-0 mt-px">✓</span>
                       <span>{item}</span>
                     </li>
                   ))}

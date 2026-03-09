@@ -213,7 +213,7 @@ export default function ContactModal({ isOpen, preset, onClose }: ContactModalPr
             className="shrink-0 w-8 h-8 flex items-center justify-center rounded-full text-primary-400 hover:text-primary-200 hover:bg-primary-800 transition-colors"
             aria-label="Close"
           >
-            &times;
+            ×
           </button>
         </div>
 

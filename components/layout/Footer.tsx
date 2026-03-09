@@ -24,7 +24,7 @@ export default function Footer() {
             {/* Brand */}
             <div>
               <p className="text-lg font-bold text-white mb-1">DM Growth</p>
-              <p className="font-mono text-xs text-primary-500">
+              <p className="text-[12px] font-light text-primary-500">
                 Revenue infrastructure by DataModulator
               </p>
             </div>
