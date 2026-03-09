@@ -6,17 +6,17 @@ import ScrollReveal from '@/components/layout/ScrollReveal'
 
 export default function CompoundingEffect() {
   return (
-    <section id="compounding" className="py-24 md:py-32">
+    <section id="compounding" className="py-20 md:py-28">
       <Container>
         <ScrollReveal>
-          <div className="max-w-[720px] mx-auto">
+          <div className="max-w-[720px] mx-auto text-center">
             <p className="font-mono text-xs tracking-[2px] uppercase text-accent-500 mb-4">
               COMPOUNDING RETURNS
             </p>
             <h2 className="text-[clamp(32px,4vw,48px)] font-bold tracking-tight leading-[1.15] mb-8">
               Month 6 outperforms month 1. That&apos;s the point.
             </h2>
-            <div className="space-y-5">
+            <div className="space-y-5 text-left">
               <p className="text-[17px] font-light text-primary-400 leading-[1.7]">
                 Agency performance is flat. Month 12 looks like month 1 because the work is
                 repetitive human labor, someone writes emails, someone manages replies, someone

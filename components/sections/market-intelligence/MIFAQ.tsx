@@ -45,10 +45,10 @@ export default function MIFAQ() {
   }
 
   return (
-    <section id="faq" className="py-24 md:py-32">
+    <section id="faq" className="py-20 md:py-28">
       <Container size="narrow">
         <ScrollReveal>
-          <div className="mb-12">
+          <div className="mb-12 md:mb-16 text-center">
             <p className="font-mono text-xs tracking-[2px] uppercase text-accent-500 mb-4">
               COMMON QUESTIONS
             </p>

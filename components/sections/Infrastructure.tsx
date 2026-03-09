@@ -33,17 +33,17 @@ const phases = [
 
 export default function Infrastructure() {
   return (
-    <section id="infrastructure" className="py-24 md:py-32">
+    <section id="infrastructure" className="py-20 md:py-28">
       <Container>
         <ScrollReveal>
-          <div className="mb-16 max-w-3xl">
+          <div className="mb-12 md:mb-16 max-w-3xl mx-auto text-center">
             <p className="font-mono text-xs tracking-[2px] uppercase text-accent-500 mb-4">
               THE JOURNEY MOST COMPANIES TAKE
             </p>
             <h2 className="text-[clamp(32px,4vw,48px)] font-bold tracking-tight leading-[1.15] mb-4">
               Three phases before infrastructure
             </h2>
-            <p className="text-[17px] font-light text-primary-400 leading-[1.7] max-w-[560px]">
+            <p className="text-[17px] font-light text-primary-400 leading-[1.7] max-w-[560px] mx-auto">
               Most B2B companies go through the same progression. The pattern is predictable, and so is the breaking point.
             </p>
           </div>

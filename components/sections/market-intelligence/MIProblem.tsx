@@ -24,20 +24,20 @@ const weDeliver = [
 
 export default function MIProblem() {
   return (
-    <section id="why" className="py-24 md:py-32">
+    <section id="why" className="py-20 md:py-28">
       <Container>
         <ScrollReveal>
-          <div className="mb-16">
+          <div className="mb-12 md:mb-16 text-center">
             <p className="font-mono text-xs tracking-[2px] uppercase text-accent-500 mb-4">
               THE LIST BUYING TRAP
             </p>
-            <h2 className="text-[clamp(32px,4vw,48px)] font-bold tracking-tight leading-[1.15] max-w-[700px]">
+            <h2 className="text-[clamp(32px,4vw,48px)] font-bold tracking-tight leading-[1.15] max-w-[700px] mx-auto">
               Static databases decay at 2-3% per month. Yours is already stale.
             </h2>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {/* Left: Text */}
           <ScrollReveal>
             <div className="space-y-5">

@@ -6,17 +6,17 @@ import ScrollReveal from '@/components/layout/ScrollReveal'
 
 export default function TrustDeficit() {
   return (
-    <section id="trust" className="py-24 md:py-32">
+    <section id="trust" className="py-20 md:py-28">
       <Container>
         <ScrollReveal>
-          <div className="max-w-[720px] mx-auto">
+          <div className="max-w-[720px] mx-auto text-center">
             <p className="font-mono text-xs tracking-[2px] uppercase text-accent-500 mb-4">
               THE CORE PROBLEM
             </p>
             <h2 className="text-[clamp(32px,4vw,48px)] font-bold tracking-tight leading-[1.15] mb-8">
               The agency model has a structural flaw
             </h2>
-            <div className="space-y-5">
+            <div className="space-y-5 text-left">
               <p className="text-[17px] font-light text-primary-400 leading-[1.7]">
                 Agencies sell activities. Emails sent, calls made, meetings booked. When the
                 contract ends, the pipeline disappears because you never owned the machinery

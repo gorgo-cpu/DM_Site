@@ -43,10 +43,10 @@ export default function MIPricing() {
   const { openModal } = useContactModal()
 
   return (
-    <section id="pricing" className="py-24 md:py-32">
+    <section id="pricing" className="py-20 md:py-28">
       <Container>
         <ScrollReveal>
-          <div className="mb-16">
+          <div className="mb-12 md:mb-16 text-center">
             <p className="font-mono text-xs tracking-[2px] uppercase text-accent-500 mb-4">
               ENGAGEMENT OPTIONS
             </p>
@@ -56,7 +56,7 @@ export default function MIPricing() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {options.map((option, index) => (
             <ScrollReveal key={index} delay={index * 120}>
               <div
@@ -100,14 +100,14 @@ export default function MIPricing() {
         </div>
 
         <ScrollReveal>
-          <div className="mt-12 max-w-4xl">
+          <div className="mt-12 max-w-4xl mx-auto text-center">
             <p className="text-[16px] text-primary-400 leading-[1.7]">
               Already have your intelligence? The natural next step is infrastructure.
               We build the outbound system that executes on it.
             </p>
             <Link
               href="/approach#model"
-              className="inline-flex items-center text-sm text-accent-500 hover:text-accent-400 transition-colors mt-3 font-medium"
+              className="inline-flex items-center justify-center text-sm text-accent-500 hover:text-accent-400 transition-colors mt-3 font-medium"
             >
               See how we build infrastructure
               <span className="ml-2">&rarr;</span>

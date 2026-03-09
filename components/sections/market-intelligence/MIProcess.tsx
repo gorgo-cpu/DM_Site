@@ -29,10 +29,10 @@ const steps = [
 
 export default function MIProcess() {
   return (
-    <section id="process" className="py-24 md:py-32">
+    <section id="process" className="py-20 md:py-28">
       <Container>
         <ScrollReveal>
-          <div className="mb-16">
+          <div className="mb-12 md:mb-16 text-center">
             <p className="font-mono text-xs tracking-[2px] uppercase text-accent-500 mb-4">
               THE PROCESS
             </p>

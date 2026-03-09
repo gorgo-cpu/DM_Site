@@ -24,10 +24,10 @@ const usItems = [
 
 export default function OwnershipComparison() {
   return (
-    <section id="ownership" className="py-24 md:py-32">
+    <section id="ownership" className="py-20 md:py-28">
       <Container>
         <ScrollReveal>
-          <div className="mb-16 max-w-3xl">
+          <div className="mb-12 md:mb-16 max-w-3xl mx-auto text-center">
             <p className="font-mono text-xs tracking-[2px] uppercase text-accent-500 mb-4">
               ASSET OWNERSHIP
             </p>
@@ -37,7 +37,7 @@ export default function OwnershipComparison() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {/* Agency column */}
           <ScrollReveal>
             <div className="border border-primary-800/50 rounded-lg p-6 bg-primary-900/30 h-full flex flex-col">

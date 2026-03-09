@@ -33,17 +33,17 @@ const pillars = [
 
 export default function Pillars() {
   return (
-    <section id="approach" className="py-24 md:py-32">
+    <section id="approach" className="py-20 md:py-28">
       <Container>
         <ScrollReveal>
-          <div className="mb-16">
+          <div className="mb-12 md:mb-16 text-center">
             <p className="font-mono text-xs tracking-[2px] uppercase text-accent-500 mb-4">
               WHAT WE BUILD
             </p>
             <h2 className="text-[clamp(32px,4vw,48px)] font-bold tracking-tight leading-[1.15] mb-4">
               Three systems. One revenue engine.
             </h2>
-            <p className="text-[17px] font-light text-primary-400 leading-[1.7] max-w-[560px]">
+            <p className="text-[17px] font-light text-primary-400 leading-[1.7] max-w-[560px] mx-auto">
               Each layer compounds the next. Intelligence feeds infrastructure, infrastructure enables precision outreach.
             </p>
           </div>

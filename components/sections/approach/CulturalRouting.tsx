@@ -7,8 +7,8 @@ import ScrollReveal from '@/components/layout/ScrollReveal'
 const markets = [
   {
     label: 'DACH',
-    title: 'Georg handles Germany, Austria, and Switzerland',
-    body: 'DACH business culture demands formal B2B etiquette. "Sehr geehrter Herr [Lastname]" isn\u2019t optional, it\u2019s table stakes. Titles matter. Directness is valued, but within a framework of professional respect. Our German-native operations don\u2019t just translate, they operate natively in the DACH business context.',
+    title: 'Native German operations, not translated English',
+    body: 'DACH business culture demands formal B2B etiquette. "Sehr geehrter Herr [Lastname]" isn\u2019t optional, it\u2019s table stakes. Titles matter. Directness is valued, but within a framework of professional respect. Georg operates natively in the DACH business context, not as a translator, but as a local operator.',
     items: [
       'Formal "Sie" address exclusively',
       'UWG-compliant cold email frameworks',
@@ -18,8 +18,8 @@ const markets = [
   },
   {
     label: 'UK',
-    title: 'David handles the United Kingdom',
-    body: 'UK outreach moves faster, tolerates more directness, but punishes overselling. British understatement beats American enthusiasm. "Quite good results" lands better than "amazing ROI." PECR-compliant B2B email is the standard channel, respected when done well, ignored when done generically.',
+    title: 'British tone, not American enthusiasm',
+    body: 'UK outreach moves faster, tolerates more directness, but punishes overselling. British understatement beats American enthusiasm. "Quite good results" lands better than "amazing ROI." David runs UK outreach with PECR-compliant B2B frameworks, respected when done well, ignored when done generically.',
     items: [
       'Professional but not stiff, British tone calibration',
       'PECR-compliant B2B outreach frameworks',
@@ -29,8 +29,8 @@ const markets = [
   },
   {
     label: 'ROMANIA',
-    title: 'David handles Romania in Romanian',
-    body: 'Romanian B2B outreach is conducted in Romanian. Relationships and hierarchy drive decisions in this market, the right tone and formality level make the difference between a reply and a delete. We combine local language fluency with the same signal-based targeting methodology used across all our markets.',
+    title: 'Local language, local market intelligence',
+    body: 'Romanian B2B outreach is conducted in Romanian. Relationships and hierarchy drive decisions in this market, the right tone and formality level make the difference between a reply and a delete. David combines local language fluency with the same signal-based targeting methodology used across all our markets.',
     items: [
       'Romanian-language outreach and follow-up',
       'Adapted formality for local business culture',
@@ -41,10 +41,10 @@ const markets = [
 
 export default function CulturalRouting() {
   return (
-    <section id="routing" className="py-24 md:py-32">
+    <section id="routing" className="py-20 md:py-28">
       <Container>
         <ScrollReveal>
-          <div className="mb-16 max-w-3xl">
+          <div className="mb-12 md:mb-16 max-w-3xl mx-auto text-center">
             <p className="font-mono text-xs tracking-[2px] uppercase text-accent-500 mb-4">
               THREE MARKETS, THREE PLAYBOOKS
             </p>

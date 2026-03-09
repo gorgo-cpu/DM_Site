@@ -6,10 +6,10 @@ import ScrollReveal from '@/components/layout/ScrollReveal'
 
 export default function IdentityWriting() {
   return (
-    <section id="identity" className="py-24 md:py-32">
+    <section id="identity" className="py-20 md:py-28">
       <Container>
         <ScrollReveal>
-          <div className="mb-16 max-w-3xl">
+          <div className="mb-12 md:mb-16 max-w-3xl mx-auto text-center">
             <p className="font-mono text-xs tracking-[2px] uppercase text-accent-500 mb-4">
               BEYOND PERSONALIZATION
             </p>
@@ -19,7 +19,7 @@ export default function IdentityWriting() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start max-w-5xl mx-auto">
           {/* Left: Text */}
           <ScrollReveal>
             <div className="space-y-5 max-w-[520px]">

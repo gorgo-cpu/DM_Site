@@ -48,10 +48,10 @@ const tiers = [
 
 export default function IaaSModel() {
   return (
-    <section id="model" className="py-24 md:py-32">
+    <section id="model" className="py-20 md:py-28">
       <Container>
         <ScrollReveal>
-          <div className="mb-16 max-w-3xl">
+          <div className="mb-12 md:mb-16 max-w-3xl mx-auto text-center">
             <p className="font-mono text-xs tracking-[2px] uppercase text-accent-500 mb-4">
               THE INFRASTRUCTURE MODEL
             </p>
