@@ -4,66 +4,38 @@ import React from 'react'
 import Container from '@/components/ui/Container'
 import ScrollReveal from '@/components/layout/ScrollReveal'
 
-const effects = [
-  {
-    month: 'MONTH 1',
-    title: 'Foundation',
-    body: 'Domains registered, DNS configured, mailboxes created. Warm-up begins. Market intelligence workbook delivered.',
-  },
-  {
-    month: 'MONTH 3',
-    title: 'Traction',
-    body: 'Sender reputation established. First outreach sequences live. Reply data feeding back into copy refinement.',
-  },
-  {
-    month: 'MONTH 6',
-    title: 'Compounding',
-    body: 'Mature sending reputation. Optimized message frameworks. Enriched contact data. The system produces more with less effort.',
-  },
-  {
-    month: 'MONTH 12+',
-    title: 'Independence',
-    body: 'Fully operational pipeline under your control. Your team runs it, scales it, or brings in new partners without starting over.',
-  },
-]
-
 export default function CompoundingEffect() {
   return (
     <section id="compounding" className="py-24 md:py-32">
       <Container>
         <ScrollReveal>
-          <div className="mb-16 max-w-3xl">
+          <div className="max-w-[720px] mx-auto">
             <p className="font-mono text-xs tracking-[2px] uppercase text-accent-500 mb-4">
-              THE LONG GAME
+              COMPOUNDING RETURNS
             </p>
-            <h2 className="text-[clamp(32px,4vw,48px)] font-bold tracking-tight leading-[1.15] mb-6">
-              Infrastructure compounds. Retainers reset.
+            <h2 className="text-[clamp(32px,4vw,48px)] font-bold tracking-tight leading-[1.15] mb-8">
+              Month 6 outperforms month 1. That&apos;s the point.
             </h2>
-            <p className="text-[17px] font-light text-primary-400 leading-[1.7]">
-              Every month your system runs, sender reputation strengthens, data enriches,
-              and targeting improves. When an agency contract ends, you start from zero.
-              When our build ends, you have a system that keeps working.
-            </p>
+            <div className="space-y-5">
+              <p className="text-[17px] font-light text-primary-400 leading-[1.7]">
+                Agency performance is flat. Month 12 looks like month 1 because the work is
+                repetitive human labor, someone writes emails, someone manages replies, someone
+                books meetings. Replace the person, restart the learning curve.
+              </p>
+              <p className="text-[17px] font-light text-primary-400 leading-[1.7]">
+                Infrastructure performance compounds. Every campaign generates signal data.
+                Every reply pattern refines the targeting. Every bounce improves deliverability
+                rules. Six months in, the system knows your market better than a new SDR ever
+                will, and it doesn&apos;t hand in a resignation letter.
+              </p>
+              <p className="text-[17px] font-light text-primary-400 leading-[1.7]">
+                This is the real argument for the infrastructure model. The setup fee isn&apos;t a
+                cost, it&apos;s a capital investment in a system that appreciates in intelligence.
+                The longer it runs, the more valuable it becomes.
+              </p>
+            </div>
           </div>
         </ScrollReveal>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {effects.map((item, index) => (
-            <ScrollReveal key={index} delay={index * 100}>
-              <div className="border border-primary-800 rounded-lg p-6 bg-primary-950 h-full">
-                <p className="font-mono text-[11px] tracking-[1.5px] uppercase text-accent-500 mb-3">
-                  {item.month}
-                </p>
-                <h3 className="text-lg font-semibold tracking-tight text-primary-50 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-primary-400 leading-[1.75]">
-                  {item.body}
-                </p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
       </Container>
     </section>
   )

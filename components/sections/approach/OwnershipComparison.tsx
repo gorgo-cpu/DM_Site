@@ -4,14 +4,22 @@ import React from 'react'
 import Container from '@/components/ui/Container'
 import ScrollReveal from '@/components/layout/ScrollReveal'
 
-const rows = [
-  { asset: 'Sending domains', agency: 'Agency keeps them', dmGrowth: 'Registered in your name' },
-  { asset: 'Email accounts', agency: 'Shut down when you leave', dmGrowth: 'Yours permanently' },
-  { asset: 'Contact lists', agency: 'Locked in their platform', dmGrowth: 'Exported to you as workbooks' },
-  { asset: 'Sender reputation', agency: 'Lost when you switch', dmGrowth: 'Built on your domains' },
-  { asset: 'Outreach copy', agency: 'Generic templates reused', dmGrowth: 'Custom frameworks you own' },
-  { asset: 'Performance data', agency: 'Dashboard access revoked', dmGrowth: 'Your spreadsheets, your analytics' },
-  { asset: 'Technical setup', agency: 'Black box', dmGrowth: 'Fully documented for your team' },
+const agencyItems = [
+  { asset: 'Domains', detail: 'Agency-owned, revoked on churn' },
+  { asset: 'Contact data', detail: 'Stays in agency\u2019s CRM' },
+  { asset: 'Campaign architecture', detail: 'Proprietary to agency' },
+  { asset: 'Sending infrastructure', detail: 'Shared across agency clients' },
+  { asset: 'Market intelligence', detail: 'Locked in agency reports' },
+  { asset: 'Writing calibration', detail: 'Generic templates, non-transferable' },
+]
+
+const usItems = [
+  { asset: 'Domains', detail: 'Registered in your name, yours permanently' },
+  { asset: 'Contact data', detail: 'Stored in your systems, exportable' },
+  { asset: 'Campaign architecture', detail: 'Documented, transferable' },
+  { asset: 'Sending infrastructure', detail: 'Dedicated to you, fully portable' },
+  { asset: 'Market intelligence', detail: 'Delivered as workbooks you keep' },
+  { asset: 'Writing calibration', detail: 'Trained on your voice, adaptable' },
 ]
 
 export default function OwnershipComparison() {
@@ -21,58 +29,55 @@ export default function OwnershipComparison() {
         <ScrollReveal>
           <div className="mb-16 max-w-3xl">
             <p className="font-mono text-xs tracking-[2px] uppercase text-accent-500 mb-4">
-              OWNERSHIP
+              ASSET OWNERSHIP
             </p>
-            <h2 className="text-[clamp(32px,4vw,48px)] font-bold tracking-tight leading-[1.15] mb-6">
-              What stays with you when a contract ends
+            <h2 className="text-[clamp(32px,4vw,48px)] font-bold tracking-tight leading-[1.15]">
+              When the contract ends, what do you keep?
             </h2>
-            <p className="text-[17px] font-light text-primary-400 leading-[1.7]">
-              The real test of any outbound partner isn&apos;t what happens during the engagement.
-              It&apos;s what you keep when it&apos;s over.
-            </p>
           </div>
         </ScrollReveal>
 
-        <ScrollReveal>
-          <div className="border border-primary-800 rounded-lg overflow-hidden">
-            <div className="grid grid-cols-3 bg-primary-900/50 border-b border-primary-800">
-              <div className="p-4">
-                <p className="font-mono text-[11px] tracking-[1.5px] uppercase text-primary-500">
-                  ASSET
-                </p>
-              </div>
-              <div className="p-4 border-l border-primary-800">
-                <p className="font-mono text-[11px] tracking-[1.5px] uppercase text-primary-500">
-                  TYPICAL AGENCY
-                </p>
-              </div>
-              <div className="p-4 border-l border-primary-800">
-                <p className="font-mono text-[11px] tracking-[1.5px] uppercase text-accent-500">
-                  DM GROWTH
-                </p>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+          {/* Agency column */}
+          <ScrollReveal>
+            <div className="border border-primary-800/50 rounded-lg p-6 bg-primary-900/30 h-full flex flex-col">
+              <p className="font-mono text-[11px] tracking-[1.5px] uppercase text-primary-500 mb-6">
+                WITH AN AGENCY
+              </p>
+              <ul className="space-y-4 flex-1">
+                {agencyItems.map((item, i) => (
+                  <li key={i}>
+                    <p className="text-sm font-medium text-primary-300">{item.asset}</p>
+                    <p className="text-sm text-primary-500">{item.detail}</p>
+                  </li>
+                ))}
+              </ul>
+              <p className="font-mono text-xs text-primary-600 mt-6 pt-4 border-t border-primary-800">
+                Net assets after 12 months: zero.
+              </p>
             </div>
+          </ScrollReveal>
 
-            {rows.map((row, index) => (
-              <div
-                key={index}
-                className={`grid grid-cols-3 ${
-                  index < rows.length - 1 ? 'border-b border-primary-800' : ''
-                }`}
-              >
-                <div className="p-4">
-                  <p className="text-sm font-medium text-primary-200">{row.asset}</p>
-                </div>
-                <div className="p-4 border-l border-primary-800">
-                  <p className="text-sm text-primary-500">{row.agency}</p>
-                </div>
-                <div className="p-4 border-l border-primary-800">
-                  <p className="text-sm text-primary-300">{row.dmGrowth}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
+          {/* Us column */}
+          <ScrollReveal delay={120}>
+            <div className="border border-accent-500/30 rounded-lg p-6 bg-primary-950 h-full flex flex-col">
+              <p className="font-mono text-[11px] tracking-[1.5px] uppercase text-accent-500 mb-6">
+                WITH US
+              </p>
+              <ul className="space-y-4 flex-1">
+                {usItems.map((item, i) => (
+                  <li key={i}>
+                    <p className="text-sm font-medium text-primary-200">{item.asset}</p>
+                    <p className="text-sm text-primary-400">{item.detail}</p>
+                  </li>
+                ))}
+              </ul>
+              <p className="font-mono text-xs text-accent-500 mt-6 pt-4 border-t border-primary-800">
+                Net assets after 12 months: a functioning revenue engine.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
       </Container>
     </section>
   )

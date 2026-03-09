@@ -49,7 +49,7 @@ export default function Infrastructure() {
           </div>
         </ScrollReveal>
 
-        <div className="relative max-w-3xl">
+        <div className="relative max-w-3xl mx-auto">
           {/* Vertical connector line (desktop only) */}
           <div className="hidden md:block absolute left-[19px] top-0 bottom-0 w-px bg-primary-800" />
 

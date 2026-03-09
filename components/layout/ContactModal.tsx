@@ -91,6 +91,13 @@ export default function ContactModal({ isOpen, preset, onClose }: ContactModalPr
   }, [isOpen, mounted])
 
   useEffect(() => {
+    if (status === 'success') {
+      const timer = setTimeout(() => onClose(), 2000)
+      return () => clearTimeout(timer)
+    }
+  }, [status, onClose])
+
+  useEffect(() => {
     if (!isOpen) return
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()

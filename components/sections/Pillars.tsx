@@ -52,21 +52,21 @@ export default function Pillars() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {pillars.map((pillar, index) => (
             <ScrollReveal key={index} delay={index * 120}>
-              <div className="relative border border-primary-800 rounded-lg p-8 h-full bg-primary-950 overflow-hidden">
+              <div className="relative border border-primary-800 rounded-lg p-8 h-full bg-primary-950 overflow-hidden flex flex-col">
                 <span className="absolute top-2 right-4 text-[56px] font-bold text-white/[0.07] leading-none select-none pointer-events-none">
                   {pillar.number}
                 </span>
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col flex-1">
                   <p className="font-mono text-[11px] tracking-[1.5px] uppercase text-accent-500 mb-4">
                     {pillar.label}
                   </p>
                   <h3 className="text-lg font-semibold tracking-tight text-primary-50 mb-4">
                     {pillar.title}
                   </h3>
-                  <p className="text-sm text-primary-400 leading-[1.75] mb-6">
+                  <p className="text-sm text-primary-400 leading-[1.75] mb-6 flex-1">
                     {pillar.body}
                   </p>
-                  <div className="pt-4 border-t border-primary-800">
+                  <div className="pt-4 border-t border-primary-800 mt-auto">
                     <p className="font-mono text-[11px] tracking-[1.5px] uppercase text-primary-500 mb-2">
                       {pillar.deliverablesLabel}
                     </p>

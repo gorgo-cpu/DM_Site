@@ -13,11 +13,11 @@ import ApproachCTA from '@/components/sections/approach/ApproachCTA'
 export const metadata: Metadata = {
   title: 'How We\'re Different | DM Growth',
   description:
-    'Infrastructure you own, not services you rent. See how our approach to outbound differs from traditional agencies.',
+    'We\'re not an agency. We install revenue infrastructure you own. Here\'s exactly how the model works and why it matters.',
   openGraph: {
     title: 'How We\'re Different | DM Growth',
     description:
-      'Infrastructure you own, not services you rent. See how our approach to outbound differs from traditional agencies.',
+      'Infrastructure ownership vs. agency dependency. The shift from renting pipeline to owning it.',
     type: 'website',
     locale: 'en_US',
   },

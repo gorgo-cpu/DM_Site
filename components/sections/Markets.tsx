@@ -61,7 +61,7 @@ export default function Markets() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {markets.map((market, index) => (
             <ScrollReveal key={index} delay={index * 120}>
-              <div className="border border-primary-800 rounded-lg p-8 h-full bg-primary-950">
+              <div className="border border-primary-800 rounded-lg p-8 h-full bg-primary-950 flex flex-col">
                 <div className="text-3xl mb-4">{market.flag}</div>
                 <p className="font-mono text-[11px] tracking-[1.5px] uppercase text-accent-500 mb-1">
                   {market.label}
@@ -72,7 +72,7 @@ export default function Markets() {
                   </p>
                 )}
                 {!market.subtitle && <div className="mb-4" />}
-                <p className="text-sm text-primary-400 leading-[1.75] mb-6">
+                <p className="text-sm text-primary-400 leading-[1.75] mb-6 flex-1">
                   {market.body}
                 </p>
                 <ul className="space-y-2">

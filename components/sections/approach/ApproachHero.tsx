@@ -37,12 +37,12 @@ export default function ApproachHero() {
           </p>
 
           <h1 className="hero-reveal opacity-0 mt-8 text-[clamp(36px,5vw,56px)] font-bold tracking-tight leading-[1.1]">
-            Most agencies sell services. We install systems.
+            Stop renting pipeline. Start owning it.
           </h1>
 
           <p className="hero-reveal opacity-0 mt-8 text-[18px] font-light text-primary-300 leading-[1.7] max-w-[600px]">
-            The difference isn&apos;t positioning. It&apos;s structural. Here&apos;s how we think
-            about outbound, and why it changes what you get.
+            Every agency promises results. We install the system that produces them,
+            then hand you the keys. Here&apos;s exactly how that works and why it matters.
           </p>
         </div>
       </Container>
