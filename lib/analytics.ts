@@ -14,3 +14,7 @@ export function trackEvent(name: string, props?: Record<string, string>): void {
     (window as any).plausible(name, { props })
   }
 }
+
+export function trackHighIntentPage(page: string): void {
+  trackEvent('high_intent_page', { page })
+}

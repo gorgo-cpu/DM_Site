@@ -219,7 +219,29 @@ export function PrivacyContent() {
         </div>
 
         <div className="space-y-2">
-          <h3 className="text-lg font-semibold text-white">9) Video Conferences / Webinars</h3>
+          <h3 className="text-lg font-semibold text-white">9) Website Visitor Identification</h3>
+          <p>
+            We use Dealfront (Leadfeeder), a GDPR-compliant website analytics service provided by
+            Dealfront GmbH, to identify which companies visit our website. This service uses IP address
+            resolution to determine the company associated with a website visit. It does not identify
+            individual persons.
+          </p>
+          <p>
+            The data processed includes: IP address (resolved to company name), pages viewed, visit
+            duration, and approximate geographic location. This data is processed under GDPR Article
+            6(1)(f) — legitimate interest in understanding which businesses are interested in our services.
+          </p>
+          <p>
+            No personal data (names, email addresses, or individual browsing profiles) is collected
+            through this service. For more information, see Dealfront&apos;s privacy policy at{' '}
+            <a href="https://www.dealfront.com/privacy/" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">
+              dealfront.com/privacy
+            </a>.
+          </p>
+        </div>
+
+        <div className="space-y-2">
+          <h3 className="text-lg font-semibold text-white">10) Video Conferences / Webinars</h3>
           <p>
             Data processed: name, email, optional audio/video, chat questions, and technical data needed to
             connect. Purpose: delivering video conferences/webinars. Recipients: processors/hosts (including
@@ -229,7 +251,7 @@ export function PrivacyContent() {
         </div>
 
         <div className="space-y-2">
-          <h3 className="text-lg font-semibold text-white">10) Your Rights</h3>
+          <h3 className="text-lg font-semibold text-white">11) Your Rights</h3>
           <p>
             You have rights to access, rectification, erasure, restriction, data portability, and objection to
             processing, as well as the right to withdraw consent. You may complain to a data protection
@@ -238,14 +260,14 @@ export function PrivacyContent() {
         </div>
 
         <div className="space-y-2">
-          <h3 className="text-lg font-semibold text-white">11) Contact</h3>
+          <h3 className="text-lg font-semibold text-white">12) Contact</h3>
           <p>
             For privacy requests, reach out to {BRAND_NAME}.
           </p>
         </div>
 
         <div className="space-y-2">
-          <h3 className="text-lg font-semibold text-white">12) Updates</h3>
+          <h3 className="text-lg font-semibold text-white">13) Updates</h3>
           <p>
             We may update this notice; material changes will be highlighted on this page. Please review it
             periodically for the latest version.

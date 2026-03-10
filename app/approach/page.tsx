@@ -9,6 +9,7 @@ import CulturalRouting from '@/components/sections/approach/CulturalRouting'
 import OwnershipComparison from '@/components/sections/approach/OwnershipComparison'
 import CompoundingEffect from '@/components/sections/approach/CompoundingEffect'
 import ApproachCTA from '@/components/sections/approach/ApproachCTA'
+import TrackHighIntent from '@/components/analytics/TrackHighIntent'
 
 export const metadata: Metadata = {
   title: 'How We\'re Different | DM Growth',
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
 export default function ApproachPage() {
   return (
     <>
+      <TrackHighIntent page="/approach" />
       <Navigation />
       <main>
         <ApproachHero />

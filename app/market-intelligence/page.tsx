@@ -8,6 +8,7 @@ import MIProof from '@/components/sections/market-intelligence/MIProof'
 import MIDeliverable from '@/components/sections/market-intelligence/MIDeliverable'
 import MIPricing from '@/components/sections/market-intelligence/MIPricing'
 import MIFAQ from '@/components/sections/market-intelligence/MIFAQ'
+import TrackHighIntent from '@/components/analytics/TrackHighIntent'
 
 export const metadata: Metadata = {
   title: 'Market Intelligence | DM Growth',
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
 export default function MarketIntelligencePage() {
   return (
     <>
+      <TrackHighIntent page="/market-intelligence" />
       <Navigation />
       <main>
         <MIHero />

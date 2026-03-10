@@ -53,6 +53,30 @@ export default function RootLayout({
         {process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' && (
           <script defer data-domain="datamodulator.ro" src="https://plausible.io/js/script.js" />
         )}
+        {/* Leadfeeder / Dealfront Web Visitors
+            TODO: Replace 'LEADFEEDER_TRACKER_ID' with actual tracker ID from Dealfront dashboard
+            Get it from: Dealfront -> Settings -> Tracking Code */}
+        {process.env.NEXT_PUBLIC_ENABLE_LEADFEEDER === 'true' && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(ss,ex){
+                  window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));};
+                  (function(d,s){
+                    fs=d.getElementsByTagName(s)[0];
+                    function ce(src){
+                      var cs=d.createElement(s);
+                      cs.src=src;
+                      cs.async=1;
+                      fs.parentNode.insertBefore(cs,fs);
+                    };
+                    ce('https://sc.lfeeder.com/lftracker_v1_'+ ss+(ex?'_'+ex:'')+'.js');
+                  })(document,'script');
+                })('LEADFEEDER_TRACKER_ID');
+              `,
+            }}
+          />
+        )}
       </head>
       <body className={plusJakarta.className}>
         <ContactModalProvider>
