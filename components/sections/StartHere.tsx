@@ -5,6 +5,7 @@ import Container from '@/components/ui/Container'
 import ScrollReveal from '@/components/layout/ScrollReveal'
 import { useContactModal } from '@/components/layout/ContactModalProvider'
 import type { ContactPreset } from '@/components/layout/ContactModal'
+import { trackEvent } from '@/lib/analytics'
 
 const tiers: {
   tier: string
@@ -87,7 +88,7 @@ export default function StartHere() {
                   {tier.body}
                 </p>
                 <button
-                  onClick={() => openModal(tier.preset)}
+                  onClick={() => { trackEvent('cta_click', { label: tier.ctaLabel, page: '/' }); openModal(tier.preset) }}
                   className={`inline-flex items-center justify-center px-6 py-3 text-sm font-semibold rounded-full transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
                     tier.primary
                       ? 'bg-accent-500 text-primary-950 hover:bg-accent-600'

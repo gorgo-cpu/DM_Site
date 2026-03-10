@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import { animate, stagger } from 'animejs'
 import Container from '@/components/ui/Container'
 import { useContactModal } from '@/components/layout/ContactModalProvider'
+import { trackEvent } from '@/lib/analytics'
 
 export default function MIHero() {
   const { openModal } = useContactModal()
@@ -49,7 +50,7 @@ export default function MIHero() {
 
           <div className="hero-reveal opacity-0 mt-10">
             <button
-              onClick={() => openModal('territory-snapshot')}
+              onClick={() => { trackEvent('cta_click', { label: 'Request a territory snapshot', page: '/market-intelligence' }); openModal('territory-snapshot') }}
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-accent-500 text-primary-950 transition-all duration-300 hover:bg-accent-600 hover:scale-[1.02] active:scale-[0.98]"
             >
               Request a territory snapshot

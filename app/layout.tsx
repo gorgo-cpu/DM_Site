@@ -49,6 +49,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={plusJakarta.variable}>
+      <head>
+        {process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' && (
+          <script defer data-domain="datamodulator.ro" src="https://plausible.io/js/script.js" />
+        )}
+      </head>
       <body className={plusJakarta.className}>
         <ContactModalProvider>
           <div id="page-shell" className="page-shell min-h-screen">

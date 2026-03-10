@@ -5,6 +5,7 @@ import { animate, stagger } from 'animejs'
 import Link from 'next/link'
 import Container from '@/components/ui/Container'
 import { useContactModal } from '@/components/layout/ContactModalProvider'
+import { trackEvent } from '@/lib/analytics'
 
 const proofItems = [
   {
@@ -70,7 +71,7 @@ export default function Hero() {
 
           <div className="hero-reveal opacity-0 mt-10 flex flex-col sm:flex-row gap-4">
             <button
-              onClick={() => openModal('territory-snapshot')}
+              onClick={() => { trackEvent('cta_click', { label: 'Get a territory snapshot', page: '/' }); openModal('territory-snapshot') }}
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-accent-500 text-primary-950 transition-all duration-300 hover:bg-accent-600 hover:scale-[1.02] active:scale-[0.98]"
             >
               Get a territory snapshot

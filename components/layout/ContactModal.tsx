@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { contactFormSchema, type ContactFormData } from '@/lib/validation'
+import { trackEvent } from '@/lib/analytics'
 
 export type ContactPreset =
   | 'territory-snapshot'
@@ -167,6 +168,7 @@ export default function ContactModal({ isOpen, preset, onClose }: ContactModalPr
       })
 
       if (res.ok) {
+        trackEvent('contact_form_submit', { preset })
         setStatus('success')
       } else if (res.status === 429) {
         setServerError('Too many requests. Please try again in a few minutes.')
