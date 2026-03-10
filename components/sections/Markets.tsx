@@ -34,7 +34,7 @@ const markets = [
     label: 'ROMANIA',
     title: 'Local language, local market intelligence',
     subtitle: '',
-    body: 'Romanian B2B outreach is conducted in Romanian. Relationships and hierarchy drive decisions in this market, the right tone and formality level make the difference between a reply and a delete. David combines local language fluency with signal-based targeting across all our markets.',
+    body: 'Romanian B2B runs on trust and status. Decision-makers expect to be approached in Romanian, with awareness of local company hierarchies and business norms. We target IT services firms, software houses, and professional services companies showing active growth signals, the same methodology as DACH and UK, adapted for a market where personal credibility opens doors faster than cold logic.',
     details: [
       'Romanian-language outreach and follow-up',
       'Adapted formality for local business culture',
