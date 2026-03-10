@@ -63,14 +63,6 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="mailto:david@datamodulator.ro"
-                  className="text-sm text-primary-400 hover:text-primary-200 transition-colors"
-                >
-                  david@datamodulator.ro
-                </a>
-              </li>
-              <li>
-                <a
                   href="mailto:georg@dm-growth.com"
                   className="text-sm text-primary-400 hover:text-primary-200 transition-colors"
                 >
@@ -109,7 +101,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-primary-800 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="font-mono text-xs text-primary-600">
-            &copy; 2026 DataModulator. All rights reserved.
+            &copy; 2026 Data Modulator Inc. S.R.L. All rights reserved.
           </p>
           <p className="font-mono text-xs text-primary-600">
             Bucharest, Romania
