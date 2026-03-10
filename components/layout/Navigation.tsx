@@ -14,6 +14,7 @@ export default function Navigation() {
   const pathname = usePathname()
   const isHome = pathname === '/'
   const overlayRef = useRef<HTMLDivElement>(null)
+  const toggleRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +34,10 @@ export default function Navigation() {
   useEffect(() => {
     if (!mobileOpen) return
     const handleClick = (e: MouseEvent) => {
-      if (overlayRef.current && !overlayRef.current.contains(e.target as Node)) {
+      const target = e.target as Node
+      const clickedToggle = toggleRef.current?.contains(target)
+      const clickedOverlay = overlayRef.current?.contains(target)
+      if (!clickedToggle && !clickedOverlay) {
         setMobileOpen(false)
       }
     }
@@ -143,6 +147,7 @@ export default function Navigation() {
           {/* Mobile hamburger - visible below sm (640px) */}
           <button
             className="sm:hidden relative w-10 h-10 flex items-center justify-center"
+            ref={toggleRef}
             onClick={() => setMobileOpen((prev) => !prev)}
             aria-label={mobileOpen ? 'Close navigation' : 'Open navigation'}
             aria-expanded={mobileOpen}

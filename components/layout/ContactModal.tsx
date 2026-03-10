@@ -190,7 +190,7 @@ export default function ContactModal({ isOpen, preset, onClose }: ContactModalPr
 
   return createPortal(
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center px-4 py-6 transition-opacity duration-300 ${
+      className={`fixed inset-0 z-[9999] flex items-center justify-center px-4 py-6 transition-opacity duration-10 ease-in ${
         isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       }`}
       role="dialog"
@@ -198,14 +198,22 @@ export default function ContactModal({ isOpen, preset, onClose }: ContactModalPr
       aria-label={config.heading}
     >
       <div
-        className="absolute inset-0 bg-primary-950/80 backdrop-blur-xl"
+        className="absolute inset-0"
         onClick={onClose}
-      />
+        aria-hidden="true"
+      >
+        <div className="absolute inset-0 bg-primary-950/80 backdrop-blur-lg transition-opacity duration-100 ease-out" />
+        <div
+          className={`absolute inset-0 pointer-events-none transition-opacity duration-400 ease-out bg-[radial-gradient(circle_at_center,rgba(10,13,30,0)_35%,rgba(6,8,20,0.82)_70%,rgba(6,8,20,0.95)_100%)] ${
+            isOpen ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
+      </div>
 
       <div
         ref={panelRef}
-        className={`relative z-10 w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl border border-primary-800 bg-primary-950 shadow-2xl transition-all duration-300 ${
-          isOpen ? 'translate-y-0 scale-100 opacity-100' : 'translate-y-6 scale-[0.98] opacity-0'
+        className={`relative z-10 w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl border border-primary-800 bg-primary-950 shadow-2xl transition-transform transition-opacity duration-150 ease-out will-change-transform ${
+          isOpen ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-80'
         }`}
       >
         <div className="flex items-center justify-between border-b border-primary-800 px-6 py-5">
