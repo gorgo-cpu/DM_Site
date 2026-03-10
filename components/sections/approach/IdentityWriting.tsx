@@ -70,11 +70,14 @@ Best regards,
                 <div className="font-mono text-[13px] text-primary-300 leading-[1.8] whitespace-pre-line">
                   {`Hi Marcus,
 
-Saw the VP Sales search go live last week \u2014 that usually means the outbound engine needs to catch up with the hiring plan. We\u2019ve been solving that exact timing problem for mid-market teams scaling past 50.
+Saw the VP Sales search go live last week, that usually means the outbound engine needs to catch up with the hiring plan.
+
+We've been solving that exact timing problem for mid-market teams scaling past 50.
 
 Worth a 15-min look?
 
-- D`}
+Best,
+David`}
                 </div>
               </div>
 
