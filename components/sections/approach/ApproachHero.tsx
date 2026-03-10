@@ -4,15 +4,30 @@ import React, { useEffect, useRef } from 'react'
 import { animate, stagger } from 'animejs'
 import Container from '@/components/ui/Container'
 
+function showAll(container: HTMLElement) {
+  container.querySelectorAll('.hero-reveal').forEach((el) => {
+    ;(el as HTMLElement).style.opacity = '1'
+  })
+}
+
 export default function ApproachHero() {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (!ref.current) return
+
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches
 
-    if (prefersReducedMotion || !ref.current) return
+    if (prefersReducedMotion) {
+      showAll(ref.current)
+      return
+    }
+
+    const fallback = setTimeout(() => {
+      if (ref.current) showAll(ref.current)
+    }, 1500)
 
     const blocks = ref.current.querySelectorAll('.hero-reveal')
 
@@ -23,12 +38,14 @@ export default function ApproachHero() {
       duration: 1000,
       delay: stagger(120, { start: 200 }),
     })
+
+    return () => clearTimeout(fallback)
   }, [])
 
   return (
     <section
       id="approach-hero"
-      className="relative min-h-[80vh] flex items-center overflow-hidden"
+      className="relative min-h-[80dvh] flex items-center overflow-hidden"
     >
       <Container className="relative z-10 pt-32 pb-20">
         <div ref={ref} className="max-w-3xl">

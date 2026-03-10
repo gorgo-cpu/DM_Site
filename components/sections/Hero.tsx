@@ -22,16 +22,32 @@ const proofItems = [
   },
 ]
 
+function showAll(container: HTMLElement) {
+  container.querySelectorAll('.hero-reveal').forEach((el) => {
+    ;(el as HTMLElement).style.opacity = '1'
+  })
+}
+
 export default function Hero() {
   const { openModal } = useContactModal()
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (!ref.current) return
+
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches
 
-    if (prefersReducedMotion || !ref.current) return
+    if (prefersReducedMotion) {
+      showAll(ref.current)
+      return
+    }
+
+    // Fallback: if animation hasn't completed after 1.5s, force-show
+    const fallback = setTimeout(() => {
+      if (ref.current) showAll(ref.current)
+    }, 1500)
 
     const blocks = ref.current.querySelectorAll('.hero-reveal')
 
@@ -42,12 +58,14 @@ export default function Hero() {
       duration: 1000,
       delay: stagger(120, { start: 200 }),
     })
+
+    return () => clearTimeout(fallback)
   }, [])
 
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-[100dvh] flex items-center overflow-hidden"
     >
       <Container className="relative z-10 pt-32 pb-20">
         <div ref={ref} className="max-w-4xl">
