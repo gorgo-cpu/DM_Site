@@ -4,9 +4,9 @@ const BRAND_NAME = 'DM Growth'
 const LEGAL_EFFECTIVE_DATE = 'January 9, 2026'
 
 const COMPANY_DETAILS = {
-  name: 'DM Growth',
+  name: 'Data Modulator Inc. S.R.L.',
   address: 'Bucharest, Romania',
-  representative: 'David Costetchi',
+  representative: 'Data Modulator Inc. S.R.L.',
 }
 
 const DPO_DETAILS = {
