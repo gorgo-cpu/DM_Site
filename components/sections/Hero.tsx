@@ -67,9 +67,9 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[100dvh] flex items-center overflow-hidden"
     >
-      <Container className="relative z-10 pt-32 pb-20">
-        <div ref={ref} className="max-w-4xl">
-          <p className="hero-reveal opacity-0 font-mono text-xs tracking-[2px] uppercase text-accent-500">
+      <Container className="relative z-15 pt-32 pb-20">
+        <div ref={ref} className="max-w-4xl mx-auto text-center">
+          <p className="hero-reveal opacity-0 font-mono text-xs tracking-[2px] text-left uppercase text-accent-500">
             OUTBOUND INFRASTRUCTURE, NOT ANOTHER AGENCY
           </p>
 
@@ -81,13 +81,13 @@ export default function Hero() {
             them.
           </h1>
 
-          <p className="hero-reveal opacity-0 mt-8 text-[19px] font-light text-primary-300 leading-[1.7] max-w-[600px]">
+          <p className="hero-reveal opacity-0 mt-8 text-[19px] font-light text-primary-300 leading-[1.7] max-w-[600px] mx-auto">
             Your outbound shouldn&apos;t depend on someone else&apos;s login
             credentials. We build revenue infrastructure you own, operate,
             and keep, even if we part ways.
           </p>
 
-          <div className="hero-reveal opacity-0 mt-10 flex flex-col sm:flex-row gap-4">
+          <div className="hero-reveal opacity-0 mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => { trackEvent('cta_click', { label: 'Get a territory snapshot', page: '/' }); openModal('territory-snapshot') }}
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-accent-500 text-primary-950 transition-all duration-300 hover:bg-accent-600 hover:scale-[1.02] active:scale-[0.98]"
@@ -103,7 +103,7 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="hero-reveal opacity-0 mt-16 pt-8 border-t border-primary-800 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="hero-reveal opacity-0 mt-16 pt-8 border-t border-primary-800 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left sm:text-left">
             {proofItems.map((item) => (
               <div key={item.label}>
                 <p className="font-mono text-[11px] tracking-[1.5px] uppercase text-accent-500 mb-2">
